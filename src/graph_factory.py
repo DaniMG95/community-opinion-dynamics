@@ -31,11 +31,17 @@ class GraphFactory:
         rest_nodes = self.nodes % self.communities
         community_graphs = {}
         for i in range(self.communities):
-            community_size = nodes_per_community + (1 if i < rest_nodes else 0)
-            nodes = [str(uuid.uuid4()) for _ in range(community_size)]
-            rest_nodes -= 1 if i < rest_nodes else 0
+            nodes = [str(uuid.uuid4()) for _ in range(nodes_per_community)]
             community_graphs[i] = nodes
+            nodes = [(identifier, {"opinion": random.random()}) for identifier in nodes]
             graph.add_nodes_from(nodes)
+
+        if rest_nodes > 0:
+            communities = random.sample(list(community_graphs.keys()), rest_nodes)
+            for community in communities:
+                node = str(uuid.uuid4())
+                community_graphs[community].append(node)
+                graph.add_node(node, opinion=random.random())
 
         while graph.number_of_edges() < self.edges:
             if self._select_type_edge():

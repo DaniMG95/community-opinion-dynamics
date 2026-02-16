@@ -1,7 +1,11 @@
+import random
+
 class GraphDW:
-    def __init__(self, graph, communities):
+    def __init__(self, graph, communities, d):
         self.graph = graph
         self.communities = communities
+        self.d = d
+        self.history_opinions = []
 
     def draw_graph(self):
         import matplotlib.pyplot as plt
@@ -28,4 +32,47 @@ class GraphDW:
         plt.title("Graph")
         plt.legend(scatterpoints=1)
         plt.axis('off')
+        plt.show()
+
+    def apply_dw(self, v_convergence, confidence_threshold):
+        edges = list(self.graph.edges)
+        steps = 0
+        total_diff = 100000
+        opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
+        self.history_opinions.append(opinions)
+        while total_diff > self.d:
+            for _ in range(2*self.graph.number_of_edges()):
+                total_diff = 0
+                random_edge = random.choice(edges)
+                node1, node2 = random_edge
+                opinion1 = self.graph.nodes[node1]['opinion']
+                opinion2 = self.graph.nodes[node2]['opinion']
+                if abs(opinion1 - opinion2) <= confidence_threshold:
+                    diff = v_convergence * (opinion2 - opinion1)
+                    self.graph.nodes[node1]['opinion'] += diff
+                    self.graph.nodes[node2]['opinion'] -= diff
+                    total_diff += abs(diff)
+                steps += 1
+                opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
+                self.history_opinions.append(opinions)
+            print("actual sum of opinions: ", total_diff)
+        return steps
+
+    def draw_opinions(self, path: str):
+        import matplotlib.pyplot as plt
+        import numpy as np
+        if not self.history_opinions:
+            print("No opinions history to plot.")
+            return
+
+        history_opinions = np.array(self.history_opinions)
+        plt.figure(figsize=(20, 12), dpi=300)
+        for i in range(history_opinions.shape[1]):
+            plt.plot(history_opinions[:, i], color='steelblue', linestyle='-', alpha=0.05, lw=0.5)
+        plt.title("Evolution of Opinions - Large Scale Simulation", fontsize=20)
+        plt.xlabel("Simulation Steps", fontsize=15)
+        plt.ylabel("Opinion Value", fontsize=15)
+        plt.ylim(-0.05, 1.05)
+        plt.grid(True, which='both', linestyle='--', alpha=0.2)
+        plt.savefig(path, bbox_inches='tight', dpi=300)
         plt.show()
