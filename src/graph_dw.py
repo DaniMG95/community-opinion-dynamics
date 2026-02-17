@@ -55,7 +55,7 @@ class GraphDW:
                 steps += 1
                 opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
                 self.history_opinions.append(opinions)
-            print(f"actual sum of opinions: {total_diff}, steps: {steps}")
+            # print(f"actual sum of opinions: {total_diff}, steps: {steps}")
         return steps
 
     def draw_opinions(self, path: str):

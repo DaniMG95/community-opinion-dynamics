@@ -1,11 +1,24 @@
-from graph_factory import GraphFactory
-from graph import GraphDW
+from execute_monte_carlo import ExecuteMonteCarloDW
 
-graph_factory = GraphFactory(nodes=1000, edges=5000, communities=10, p_inter=0.7)
 
-graph, communities_nodes = graph_factory.generate_graph()
+NODES = 1000
+EDGES = 5000
+COMMUNITIES = 10
+D = 0.001
+V_CONVERGENCE = 0.25
+NUM_EXECUTES = 20
+SAVE_RESULTS = True
+P_INTER_LIST = [0.3, 0.5, 0.7, 0.9]
+CONFIDENCE_THRESHOLD_LIST = [0.10, 0.15, 0.20, 0.25, 0.30]
 
-graph_dw = GraphDW(graph=graph, communities=communities_nodes, d=0.001)
-steps = graph_dw.apply_dw(v_convergence=0.25, confidence_threshold=0.3)
-print(f"Number of steps to convergence: {steps}")
-graph_dw.draw_opinions(path="opinions_history.png")
+for p_inter in P_INTER_LIST:
+    for confidence_threshold in CONFIDENCE_THRESHOLD_LIST:
+        print("---------------------------------------------")
+        print(f"Executing Monte Carlo for p_inter: {p_inter}, confidence_threshold: {confidence_threshold}")
+        execute_monte_carlo = ExecuteMonteCarloDW(nodes=NODES, edges=EDGES, communities=COMMUNITIES, p_inter=p_inter,
+                                                  d=D, v_convergence=V_CONVERGENCE,
+                                                  confidence_threshold=confidence_threshold,
+                                                  num_executes=NUM_EXECUTES, save_results=SAVE_RESULTS)
+
+        average_steps = execute_monte_carlo.execute()
+        print(f"Average steps to convergence: {average_steps}")
