@@ -41,9 +41,9 @@ class GraphDW:
         opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
         self.history_opinions.append(opinions)
         while total_diff > self.d:
-            for _ in range(2*self.graph.number_of_edges()):
-                total_diff = 0
-                random_edge = random.choice(edges)
+            random.shuffle(edges)
+            total_diff = 0
+            for random_edge in edges:
                 node1, node2 = random_edge
                 opinion1 = self.graph.nodes[node1]['opinion']
                 opinion2 = self.graph.nodes[node2]['opinion']
@@ -55,7 +55,7 @@ class GraphDW:
                 steps += 1
                 opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
                 self.history_opinions.append(opinions)
-            print("actual sum of opinions: ", total_diff)
+            print(f"actual sum of opinions: {total_diff}, steps: {steps}")
         return steps
 
     def draw_opinions(self, path: str):
