@@ -1,0 +1,32 @@
+Execution 1/30 - steps : 85000 - p_inter 0.3 - confidence_threshold 0.25
+Execution 2/30 - steps : 155000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 49497.474683058324
+Execution 3/30 - steps : 170000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 45368.85862938733
+Execution 4/30 - steps : 190000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 45643.54645876384
+Execution 5/30 - steps : 185000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 42514.70333896263
+Execution 6/30 - steps : 155000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 38035.071534922434
+Execution 7/30 - steps : 80000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 45224.30867617652
+Execution 8/30 - steps : 85000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 47051.4535983139
+Execution 9/30 - steps : 160000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 44612.529381080574
+Execution 10/30 - steps : 85000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 45582.647770591146
+Execution 11/30 - steps : 90000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 45322.07970835969
+Execution 12/30 - steps : 95000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 44438.84118719351
+Execution 13/30 - steps : 165000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 43772.43014758994
+Execution 14/30 - steps : 180000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 44065.38598217701
+Execution 15/30 - steps : 115000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 42753.44597640222
+Execution 16/30 - steps : 165000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 42071.36793592526
+Execution 17/30 - steps : 150000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 40897.558534925374
+Execution 18/30 - steps : 85000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 41449.43371815296
+Execution 19/30 - steps : 95000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 41216.87044593179
+Execution 20/30 - steps : 195000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 42589.68864581389
+Execution 21/30 - steps : 155000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 41757.51999569031
+Execution 22/30 - steps : 210000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 43757.497811445006
+Execution 23/30 - steps : 95000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 43708.97285798873
+Execution 24/30 - steps : 85000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 44033.50173858898
+Execution 25/30 - steps : 245000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 48433.8036224013
+Execution 26/30 - steps : 100000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 48067.66064621826
+Execution 27/30 - steps : 175000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 47683.51862769723
+Execution 28/30 - steps : 170000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 47160.08984378713
+Execution 29/30 - steps : 160000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 46458.97072246794
+Execution 30/30 - steps : 80000 - p_inter 0.3 - confidence_threshold 0.25 - stdev 46976.39416978917
+-----FINISHED EXECUTE MONTE CARLO----
+Average steps: 138666.66666666666

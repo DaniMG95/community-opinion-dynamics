@@ -59,6 +59,9 @@ class GraphDW:
         return steps
 
     def draw_opinions(self, path: str):
+        import matplotlib
+        matplotlib.use('Agg')
+
         import matplotlib.pyplot as plt
         import numpy as np
         if not self.history_opinions:
@@ -66,13 +69,13 @@ class GraphDW:
             return
 
         history_opinions = np.array(self.history_opinions)
-        plt.figure(figsize=(20, 12), dpi=300)
+        plt.figure(figsize=(20, 12), dpi=150)
         for i in range(history_opinions.shape[1]):
-            plt.plot(history_opinions[:, i], color='steelblue', linestyle='-', alpha=0.05, lw=0.5)
+            plt.plot(history_opinions[::1000, i], color='steelblue', linestyle='-', alpha=0.05, lw=0.5)
         plt.title("Evolution of Opinions - Large Scale Simulation", fontsize=20)
         plt.xlabel("Simulation Steps", fontsize=15)
         plt.ylabel("Opinion Value", fontsize=15)
         plt.ylim(-0.05, 1.05)
         plt.grid(True, which='both', linestyle='--', alpha=0.2)
-        plt.savefig(path, bbox_inches='tight', dpi=300)
-        plt.show()
+        plt.savefig(path, bbox_inches='tight', dpi=150)
+        plt.close()

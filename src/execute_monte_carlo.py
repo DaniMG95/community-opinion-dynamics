@@ -5,7 +5,7 @@ import os
 import shutil
 
 class ExecuteMonteCarloDW:
-    PATH_RESULTS = "../results"
+    PATH_RESULTS = "./results"
 
     def __init__(self, nodes: int, edges: int, communities: int, p_inter: float, d: float, v_convergence: float,
                  confidence_threshold: float, num_executes: int, save_results: bool = True):
@@ -34,12 +34,13 @@ class ExecuteMonteCarloDW:
             if self.save_results:
                 graph_dw.draw_opinions(path=f"{self.path_directory}/opinions_history_{i}_steps_{steps}.png")
             steps_monte_carlo.append(steps)
-            results = f"Execution {i+1}/{self.num_executes} - steps : {steps}"
+            results = (f"Execution {i+1}/{self.num_executes} - steps : {steps} - p_inter {self.p_inter} "
+                       f"- confidence_threshold {self.confidence_threshold}")
             if len(steps_monte_carlo) > 1:
                 results += f" - stdev {statistics.stdev(steps_monte_carlo)}"
             print(results)
             with open(f"{self.path_directory}/results.txt", "a+") as file:
-                file.write(results)
+                file.write(results + "\n")
 
         mean_steps = statistics.mean(steps_monte_carlo)
         with open(f"{self.path_directory}/results.txt", "a+") as file:
