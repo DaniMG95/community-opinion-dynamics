@@ -10,7 +10,6 @@ SAVE_RESULTS = True
 P_INTER_LIST = [0.3, 0.5, 0.7, 0.9]
 CONFIDENCE_THRESHOLD_LIST = [0.10, 0.15, 0.20, 0.25, 0.30]
 
-NEEDS_TESTS = [(0.3, 0.10), (0.7, 0.10), (0.9, 0.10), (0.9, 0.15), (0.9, 0.20)]
 
 import concurrent.futures
 
@@ -42,12 +41,9 @@ if __name__ == "__main__":
     CONFIDENCE_THRESHOLD_LIST = [0.10, 0.15, 0.20, 0.25, 0.30]
 
     tasks = []
-    # for p_inter in P_INTER_LIST:
-    #     for ct in CONFIDENCE_THRESHOLD_LIST:
-    #         tasks.append((p_inter, ct))
-
-    for task in NEEDS_TESTS:
-        tasks.append(task)
+    for p_inter in P_INTER_LIST:
+        for ct in CONFIDENCE_THRESHOLD_LIST:
+            tasks.append((p_inter, ct))
 
     print(f"Lanzando {len(tasks)} configuraciones en paralelo...")
 
