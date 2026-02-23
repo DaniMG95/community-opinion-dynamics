@@ -41,10 +41,10 @@
         \begin{tabular}{|l|c|c|c|c|c|}
             \hline
             \diagbox{Prob. inter}{umbral confianza} & 0.1 & 0.15 & 0.2 & 0.25 & 0.3 \\ \hline
-            0.3 & AA & 314000 & 189833 & 138666 & 75000 \\ \hline
-            0.5 & 723833 & AA & 203333 & 152833 & 76166 \\ \hline
-            0.7 & AA & 399833 & 256833 & 168166 & 79666 \\ \hline
-            0.9 & AA & AA & AA & 337166 & 162166 \\ \hline
+            0.3 & 708666 & 314000 & 189833 & 138666 & 75000 \\ \hline
+            0.5 & 723833 & 345000 & 203333 & 152833 & 76166 \\ \hline
+            0.7 & 823833 & 399833 & 256833 & 168166 & 79666 \\ \hline
+            0.9 & 1632166 & 826500 & 478166 & 337166 & 162166 \\ \hline
         \end{tabular}
         \caption{Ejemplo de tabla con división diagonal}
     \end{table}
@@ -52,6 +52,23 @@
     \section{Gráficas}
 
     \subsection{Prob. inter 0.3, confianza 0.1}
+    \begin{figure}[htbp]
+        \centering
+        \begin{subfigure}[b]{0.48\linewidth}
+            \includegraphics[width=\linewidth]{results/p_0.3_threshold_0.1/opinions_history_1}
+            \caption{Fragmentación con union al final}
+            \label{fig:p_0.3_threshold_0.1_1}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.48\linewidth}
+            \includegraphics[width=\linewidth]{results/p_0.3_threshold_0.1/opinions_history_2}
+            \caption{Fragmentación}
+            \label{fig:p_0.3_threshold_0.1_2}
+        \end{subfigure}
+        \caption{Histórico de opiniones Prob. inter 0.3, confianza 0.1}
+        \label{fig:p_0.3_threshold_0.1}
+    \end{figure}
+    \FloatBarrier
+
 
     \subsection{Prob. inter 0.3, confianza 0.15}
     \begin{figure}[htbp]
@@ -75,7 +92,6 @@
         \label{fig:p_0.3_threshold_0.15}
     \end{figure}
     \FloatBarrier
-
 
 
     \subsection{Prob. inter 0.3, confianza 0.2}
@@ -102,7 +118,7 @@
         \end{subfigure}
         \begin{subfigure}[b]{0.32\linewidth}
             \includegraphics[width=\linewidth]{results/p_0.3_threshold_0.25/opinions_history_3}
-            \caption{Polarización finalmente Consenso}
+            \caption{Consenso}
             \label{fig:p_0.3_threshold_0.25_3}
         \end{subfigure}
         \caption{Histórico de opiniones Prob. inter 0.3, confianza 0.25}
@@ -129,7 +145,22 @@
     \FloatBarrier
 
     \subsection{Prob. inter 0.5, confianza 0.15}
-
+    \begin{figure}[htbp]
+        \centering
+        \begin{subfigure}[b]{0.48\linewidth}
+            \includegraphics[width=\linewidth]{results/p_0.5_threshold_0.15/opinions_history_1}
+            \caption{Fragmentación}
+            \label{fig:p_0.5_threshold_0.15_1}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.48\linewidth}
+            \includegraphics[width=\linewidth]{results/p_0.5_threshold_0.15/opinions_history_2}
+            \caption{Polarización}
+            \label{fig:p_0.5_threshold_0.15_2}
+        \end{subfigure}
+        \caption{Histórico de opiniones Prob. inter 0.5, confianza 0.15}
+        \label{fig:p_0.5_threshold_0.15}
+    \end{figure}
+    \FloatBarrier
 
     \subsection{Prob. inter 0.5, confianza 0.2}
     \begin{figure}[htbp]
@@ -170,7 +201,22 @@
 
 
     \subsection{Prob. inter 0.7, confianza 0.1}
-
+    \begin{figure}[htbp]
+        \centering
+        \begin{subfigure}[b]{0.48\linewidth}
+            \includegraphics[width=\linewidth]{results/p_0.7_threshold_0.1/opinions_history_1}
+            \caption{Fragmentación con union al final}
+            \label{fig:p_0.7_threshold_0.1_1}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.48\linewidth}
+            \includegraphics[width=\linewidth]{results/p_0.7_threshold_0.1/opinions_history_2}
+            \caption{Fragmentación}
+            \label{fig:p_0.7_threshold_0.1_2}
+        \end{subfigure}
+        \caption{Histórico de opiniones Prob. inter 0.7, confianza 0.1}
+        \label{fig:p_0.7_threshold_0.1}
+    \end{figure}
+    \FloatBarrier
 
     \subsection{Prob. inter 0.7, confianza 0.15}
     \begin{figure}[htbp]
@@ -191,6 +237,13 @@
     \FloatBarrier
 
     \subsection{Prob. inter 0.7, confianza 0.2}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.33\linewidth]{results/p_0.7_threshold_0.2/opinions_history}
+        \caption{Histórico de opiniones Prob. inter 0.7, confianza 0.2: Polarización}
+        \label{fig:p_0.7_threshold_0.2}
+    \end{figure}
+    \FloatBarrier
 
     \subsection{Prob. inter 0.7, confianza 0.25}
     \begin{figure}[htbp]
@@ -211,13 +264,65 @@
     \FloatBarrier
 
     \subsection{Prob. inter 0.7, confianza 0.3}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.33\linewidth]{results/p_0.7_threshold_0.3/opinions_history}
+        \caption{Histórico de opiniones Prob. inter 0.7, confianza 0.3: Consenso}
+        \label{fig:p_0.7_threshold_0.3}
+    \end{figure}
+    \FloatBarrier
 
     \subsection{Prob. inter 0.9, confianza 0.10}
-
+    \begin{figure}[htbp]
+        \centering
+        \begin{subfigure}[b]{0.48\linewidth}
+            \includegraphics[width=\linewidth]{results/p_0.9_threshold_0.1/opinions_history_1}
+            \caption{Fragmentación}
+            \label{fig:p_0.9_threshold_0.1_1}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.48\linewidth}
+            \includegraphics[width=\linewidth]{results/p_0.9_threshold_0.1/opinions_history_2}
+            \caption{Polarización}
+            \label{fig:p_0.9_threshold_0.1_2}
+        \end{subfigure}
+        \caption{Histórico de opiniones Prob. inter 0.9, confianza 0.1}
+        \label{fig:p_0.9_threshold_0.1}
+    \end{figure}
+    \FloatBarrier
 
     \subsection{Prob. inter 0.9, confianza 0.15}
+    \begin{figure}[htbp]
+        \centering
+        \begin{subfigure}[b]{0.32\linewidth}
+            \includegraphics[width=\linewidth]{results/p_0.9_threshold_0.15/opinions_history_1}
+            \caption{Polarización}
+            \label{fig:p_0.9_threshold_0.15_1}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.32\linewidth}
+            \includegraphics[width=\linewidth]{results/p_0.9_threshold_0.15/opinions_history_2}
+            \caption{Fragmentación}
+            \label{fig:p_0.9_threshold_0.15_2}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.32\linewidth}
+            \includegraphics[width=\linewidth]{results/p_0.9_threshold_0.15/opinions_history_3}
+            \caption{Fragmentación finalmente polarización}
+            \label{fig:p_0.9_threshold_0.15_3}
+        \end{subfigure}
+        \caption{Histórico de opiniones Prob. inter 0.9, confianza 0.15}
+        \label{fig:p_0.9_threshold_0.15}
+    \end{figure}
+    \FloatBarrier
+
 
     \subsection{Prob. inter 0.9, confianza 0.2}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.33\linewidth]{results/p_0.9_threshold_0.2/opinions_history}
+        \caption{Histórico de opiniones Prob. inter 0.9, confianza 0.2: Polarización}
+        \label{fig:p_0.9_threshold_0.2}
+    \end{figure}
+    \FloatBarrier
+
 
     \subsection{Prob. inter 0.9, confianza 0.25}
     \begin{figure}[htbp]
