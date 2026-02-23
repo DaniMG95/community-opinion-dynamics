@@ -37,9 +37,6 @@ def run_simulation(params):
 
 if __name__ == "__main__":
 
-    P_INTER_LIST = [0.3, 0.5, 0.7, 0.9]
-    CONFIDENCE_THRESHOLD_LIST = [0.10, 0.15, 0.20, 0.25, 0.30]
-
     tasks = []
     for p_inter in P_INTER_LIST:
         for ct in CONFIDENCE_THRESHOLD_LIST:
