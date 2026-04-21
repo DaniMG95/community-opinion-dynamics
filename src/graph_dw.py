@@ -37,12 +37,12 @@ class GraphDW:
     def apply_dw(self, v_convergence, confidence_threshold):
         edges = list(self.graph.edges)
         steps = 0
-        total_diff = 100000
+        max_diff = 100000
         opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
         self.history_opinions.append(opinions)
-        while total_diff > self.d:
+        while max_diff > self.d:
             random.shuffle(edges)
-            total_diff = 0
+            max_diff = 0
             for random_edge in edges:
                 node1, node2 = random_edge
                 opinion1 = self.graph.nodes[node1]['opinion']
@@ -51,11 +51,11 @@ class GraphDW:
                     diff = v_convergence * (opinion2 - opinion1)
                     self.graph.nodes[node1]['opinion'] += diff
                     self.graph.nodes[node2]['opinion'] -= diff
-                    total_diff += abs(diff)
+                    if abs(diff) > max_diff:
+                        max_diff = abs(diff)
                 steps += 1
                 opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
                 self.history_opinions.append(opinions)
-            # print(f"actual sum of opinions: {total_diff}, steps: {steps}")
         return steps
 
     def draw_opinions(self, path: str):
