@@ -1,11 +1,12 @@
 import random
 
 class GraphDW:
-    def __init__(self, graph, communities, d):
+    def __init__(self, graph, communities, d, save_history_opinions=True):
         self.graph = graph
         self.communities = communities
         self.d = d
         self.history_opinions = []
+        self.save_history_opinions = save_history_opinions
 
     def draw_graph(self):
         import matplotlib.pyplot as plt
@@ -38,8 +39,9 @@ class GraphDW:
         edges = list(self.graph.edges)
         steps = 0
         max_diff = 100000
-        opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
-        self.history_opinions.append(opinions)
+        if self.save_history_opinions:
+            opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
+            self.history_opinions.append(opinions)
         while max_diff > self.d:
             random.shuffle(edges)
             max_diff = 0
@@ -54,8 +56,9 @@ class GraphDW:
                     if abs(diff) > max_diff:
                         max_diff = abs(diff)
                 steps += 1
-                opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
-                self.history_opinions.append(opinions)
+                if self.save_history_opinions:
+                    opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
+                    self.history_opinions.append(opinions)
         return steps
 
     def draw_opinions(self, path: str):

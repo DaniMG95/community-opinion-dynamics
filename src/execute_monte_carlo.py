@@ -34,7 +34,8 @@ class ExecuteMonteCarloDW:
 
         for i in range(self.num_executes):
             graph, communities_nodes = self.graph_factory.generate_graph()
-            graph_dw = GraphDW(graph=graph, communities=communities_nodes, d=self.d)
+            graph_dw = GraphDW(graph=graph, communities=communities_nodes, d=self.d,
+                               save_history_opinions=self.save_results)
             steps = graph_dw.apply_dw(v_convergence=self.v_convergence, confidence_threshold=self.confidence_threshold)
             if self.save_results:
                 graph_dw.draw_opinions(path=f"{self.path_directory}/opinions_history_{i}_steps_{steps}.png")
