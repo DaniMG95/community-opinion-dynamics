@@ -45,8 +45,8 @@ class ExecuteMonteCarloDW:
             if len(steps_monte_carlo) > 1:
                 results += f" - stdev {statistics.stdev(steps_monte_carlo)}"
             print(results)
-            with open(f"{self.path_directory}/results.txt", "a+") as file:
-                file.write(results + "\n")
+            # with open(f"{self.path_directory}/results.txt", "a+") as file:
+            #     file.write(results + "\n")
 
         mean_steps = 0
         for i in range(0, len(steps_monte_carlo), self.partition_average):
