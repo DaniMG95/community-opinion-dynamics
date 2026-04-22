@@ -5,11 +5,13 @@ EDGES = 5000
 COMMUNITIES = 10
 D = 0.01
 V_CONVERGENCE = 0.25
-NUM_EXECUTES = 30
-SAVE_RESULTS = True
+NUM_EXECUTES = 1000
+SAVE_RESULTS = False
 P_INTER_LIST = [0.3, 0.5, 0.7, 0.9]
 CONFIDENCE_THRESHOLD_LIST = [0.10, 0.15, 0.20, 0.25, 0.30]
 
+# P_INTER_LIST = [0.3, 0.9]
+# CONFIDENCE_THRESHOLD_LIST = [0.10, 0.30]
 
 import concurrent.futures
 
@@ -44,7 +46,7 @@ if __name__ == "__main__":
 
     print(f"Lanzando {len(tasks)} configuraciones en paralelo...")
 
-    with concurrent.futures.ProcessPoolExecutor(max_workers=4) as pool:
+    with concurrent.futures.ProcessPoolExecutor(max_workers=10) as pool:
         results = list(pool.map(run_simulation, tasks))
 
     print("\n--- RESUMEN DE RESULTADOS ---")
