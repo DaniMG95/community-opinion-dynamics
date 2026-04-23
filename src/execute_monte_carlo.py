@@ -55,5 +55,5 @@ class ExecuteMonteCarloDW:
             with open(f"{self.path_directory}/results.txt", "a+") as file:
                 file.write(f"Average steps for {i + self.partition_average} simulations: {mean_partition} - "
                            f"stdev {statistics.stdev(partition)}\n")
-
+            mean_steps = mean_partition
         return mean_steps
