@@ -1,79 +1,24 @@
-from execute_monte_carlo import ExecuteMonteCarloDW
+from graph_factory import GraphFactory
+from graph_dw import GraphDW
 
 NODES = 1000
 EDGES = 5000
 COMMUNITIES = 10
 D = 0.01
 V_CONVERGENCE = 0.25
-NUM_EXECUTES = 3
+NUM_EXECUTES = 10
 SAVE_RESULTS = True
-P_INTER_LIST = [0.3]
-CONFIDENCE_THRESHOLD_LIST = [0.10, 0.15, 0.20, 0.25, 0.30]
 
+graph_factory = GraphFactory(NODES, EDGES, COMMUNITIES, 0.3)
+graph, communities_nodes = graph_factory.generate_graph()
+graph_dw = GraphDW(graph=graph, communities=communities_nodes, d=D,
+                   save_history_opinions=SAVE_RESULTS)
+graph_dw_clone = graph_dw.clone()
+steps = graph_dw.apply_dw(v_convergence=V_CONVERGENCE, confidence_threshold=0.1)
+print(steps)
+graph_dw.draw_opinions(path=f"opinions_history_0.1_threshold_0.3_p_inter.png")
 
+steps = graph_dw_clone.apply_dw(v_convergence=V_CONVERGENCE, confidence_threshold=0.3, max_steps=steps)
+print(steps)
+graph_dw_clone.draw_opinions(path=f"opinions_history_0.3_threshold_0.3_p_inter.png")
 
-executor = ExecuteMonteCarloDW(
-        nodes=NODES,
-        edges=EDGES,
-        communities=COMMUNITIES,
-        p_inter=0.3,
-        d=D,
-        v_convergence=V_CONVERGENCE,
-        confidence_threshold=0.3,
-        num_executes=NUM_EXECUTES,
-        save_results=SAVE_RESULTS
-    )
-
-steps = executor.execute()
-print(f"Average steps to convergence: {steps}")
-
-
-executor = ExecuteMonteCarloDW(
-        nodes=NODES,
-        edges=EDGES,
-        communities=COMMUNITIES,
-        p_inter=0.3,
-        d=D,
-        v_convergence=V_CONVERGENCE,
-        confidence_threshold=0.1,
-        num_executes=NUM_EXECUTES,
-        save_results=SAVE_RESULTS,
-    max_steps=steps
-    )
-
-steps = executor.execute()
-print(f"Average steps to convergence: {steps}")
-
-
-
-executor = ExecuteMonteCarloDW(
-        nodes=NODES,
-        edges=EDGES,
-        communities=COMMUNITIES,
-        p_inter=0.9,
-        d=D,
-        v_convergence=V_CONVERGENCE,
-        confidence_threshold=0.3,
-        num_executes=NUM_EXECUTES,
-        save_results=SAVE_RESULTS
-    )
-
-steps = executor.execute()
-print(f"Average steps to convergence: {steps}")
-
-
-executor = ExecuteMonteCarloDW(
-        nodes=NODES,
-        edges=EDGES,
-        communities=COMMUNITIES,
-        p_inter=0.9,
-        d=D,
-        v_convergence=V_CONVERGENCE,
-        confidence_threshold=0.1,
-        num_executes=NUM_EXECUTES,
-        save_results=SAVE_RESULTS,
-    max_steps=steps
-    )
-
-steps = executor.execute()
-print(f"Average steps to convergence: {steps}")

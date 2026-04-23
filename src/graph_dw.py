@@ -8,6 +8,10 @@ class GraphDW:
         self.history_opinions = []
         self.save_history_opinions = save_history_opinions
 
+    def clone(self):
+        import copy
+        return GraphDW(copy.deepcopy(self.graph), copy.deepcopy(self.communities), self.d, self.save_history_opinions)
+
     def draw_graph(self):
         import matplotlib.pyplot as plt
         import networkx as nx
@@ -35,17 +39,21 @@ class GraphDW:
         plt.axis('off')
         plt.show()
 
-    def apply_dw(self, v_convergence, confidence_threshold, max_steps = 0):
+    def apply_dw(self, v_convergence, confidence_threshold, max_steps=0):
         edges = list(self.graph.edges)
         steps = 0
         max_diff = 100000
         if self.save_history_opinions:
             opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
             self.history_opinions.append(opinions)
-        while max_diff > self.d and steps <= max_steps:
+        can_break = False
+        while max_diff > self.d or max_steps>steps:
             random.shuffle(edges)
             max_diff = 0
             for random_edge in edges:
+                if can_break and steps >= max_steps:
+                    max_diff = -1
+                    break
                 node1, node2 = random_edge
                 opinion1 = self.graph.nodes[node1]['opinion']
                 opinion2 = self.graph.nodes[node2]['opinion']
@@ -59,6 +67,8 @@ class GraphDW:
                 if self.save_history_opinions:
                     opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
                     self.history_opinions.append(opinions)
+            if not can_break and max_steps and max_diff < self.d:
+                can_break = True
         return steps
 
     def draw_opinions(self, path: str):
