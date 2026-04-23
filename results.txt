@@ -1,0 +1,45 @@
+p_inter: 0.9 | Threshold: 0.05 | Avg Steps: 72645
+p_inter: 0.9 | Threshold: 0.1 | Avg Steps: 787895
+p_inter: 0.9 | Threshold: 0.15 | Avg Steps: 316265
+p_inter: 0.9 | Threshold: 0.2 | Avg Steps: 115240
+p_inter: 0.9 | Threshold: 0.25 | Avg Steps: 98525
+p_inter: 0.9 | Threshold: 0.3 | Avg Steps: 46865
+p_inter: 0.9 | Threshold: 0.35 | Avg Steps: 37830
+p_inter: 0.9 | Threshold: 0.4 | Avg Steps: 34705
+p_inter: 0.9 | Threshold: 0.45 | Avg Steps: 34165
+p_inter: 0.9 | Threshold: 0.5 | Avg Steps: 33240
+p_inter: 0.9 | Threshold: 0.55 | Avg Steps: 32265
+p_inter: 0.9 | Threshold: 0.6 | Avg Steps: 31040
+p_inter: 0.9 | Threshold: 0.65 | Avg Steps: 31280
+p_inter: 0.9 | Threshold: 0.7 | Avg Steps: 30925
+p_inter: 0.9 | Threshold: 0.75 | Avg Steps: 30865
+p_inter: 0.9 | Threshold: 0.8 | Avg Steps: 30685
+p_inter: 0.9 | Threshold: 0.85 | Avg Steps: 30705
+p_inter: 0.9 | Threshold: 0.9 | Avg Steps: 30290
+p_inter: 0.9 | Threshold: 0.95 | Avg Steps: 30875
+p_inter: 0.9 | Threshold: 1.0 | Avg Steps: 30510
+
+
+p_inter: 0.3 | Threshold: 0.05 | Avg Steps: 96140
+p_inter: 0.3 | Threshold: 0.1 | Avg Steps: 527085
+p_inter: 0.3 | Threshold: 0.15 | Avg Steps: 247930
+p_inter: 0.3 | Threshold: 0.2 | Avg Steps: 74255
+p_inter: 0.3 | Threshold: 0.25 | Avg Steps: 79350
+p_inter: 0.3 | Threshold: 0.3 | Avg Steps: 41885
+p_inter: 0.3 | Threshold: 0.35 | Avg Steps: 36880
+p_inter: 0.3 | Threshold: 0.4 | Avg Steps: 34680
+p_inter: 0.3 | Threshold: 0.45 | Avg Steps: 33990
+p_inter: 0.3 | Threshold: 0.5 | Avg Steps: 33580
+p_inter: 0.3 | Threshold: 0.55 | Avg Steps: 32510
+p_inter: 0.3 | Threshold: 0.6 | Avg Steps: 32300
+p_inter: 0.3 | Threshold: 0.65 | Avg Steps: 32135
+p_inter: 0.3 | Threshold: 0.7 | Avg Steps: 31455
+p_inter: 0.3 | Threshold: 0.75 | Avg Steps: 31475
+p_inter: 0.3 | Threshold: 0.8 | Avg Steps: 31910
+p_inter: 0.3 | Threshold: 0.85 | Avg Steps: 31105
+p_inter: 0.3 | Threshold: 0.9 | Avg Steps: 31030
+p_inter: 0.3 | Threshold: 0.95 | Avg Steps: 31200
+p_inter: 0.3 | Threshold: 1.0 | Avg Steps: 31220
+
+
+

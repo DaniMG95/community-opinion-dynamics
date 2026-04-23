@@ -35,14 +35,14 @@ class GraphDW:
         plt.axis('off')
         plt.show()
 
-    def apply_dw(self, v_convergence, confidence_threshold):
+    def apply_dw(self, v_convergence, confidence_threshold, max_steps = 0):
         edges = list(self.graph.edges)
         steps = 0
         max_diff = 100000
         if self.save_history_opinions:
             opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
             self.history_opinions.append(opinions)
-        while max_diff > self.d:
+        while max_diff > self.d and steps <= max_steps:
             random.shuffle(edges)
             max_diff = 0
             for random_edge in edges:

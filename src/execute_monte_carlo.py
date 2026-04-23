@@ -9,7 +9,7 @@ class ExecuteMonteCarloDW:
 
     def __init__(self, nodes: int, edges: int, communities: int, p_inter: float, d: float, v_convergence: float,
                  confidence_threshold: float, num_executes: int, save_results: bool = True,
-                 partition_average: int = None):
+                 partition_average: int = None, max_steps: int = 0):
         self.p_inter = p_inter
         self.graph_factory = GraphFactory(nodes, edges, communities, p_inter)
         self.d = d
@@ -18,6 +18,7 @@ class ExecuteMonteCarloDW:
         self.num_executes = num_executes
         self.save_results = save_results
         self.path_directory = f"{self.PATH_RESULTS}/p_{self.p_inter}_threshold_{self.confidence_threshold}"
+        self.max_steps = max_steps
         if partition_average is None:
             self.partition_average = self.num_executes
         else:
@@ -36,7 +37,8 @@ class ExecuteMonteCarloDW:
             graph, communities_nodes = self.graph_factory.generate_graph()
             graph_dw = GraphDW(graph=graph, communities=communities_nodes, d=self.d,
                                save_history_opinions=self.save_results)
-            steps = graph_dw.apply_dw(v_convergence=self.v_convergence, confidence_threshold=self.confidence_threshold)
+            steps = graph_dw.apply_dw(v_convergence=self.v_convergence, confidence_threshold=self.confidence_threshold,
+                                      max_steps=self.max_steps)
             if self.save_results:
                 graph_dw.draw_opinions(path=f"{self.path_directory}/opinions_history_{i}_steps_{steps}.png")
             steps_monte_carlo.append(steps)

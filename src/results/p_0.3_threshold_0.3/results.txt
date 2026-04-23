@@ -1,0 +1,1 @@
+Average steps for 3 simulations: 5000 - stdev 0.0
