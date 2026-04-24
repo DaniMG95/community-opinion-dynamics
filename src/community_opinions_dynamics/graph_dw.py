@@ -71,7 +71,7 @@ class GraphDW:
                 can_break = True
         return steps
 
-    def draw_opinions(self, path: str):
+    def draw_opinions(self, path: str, title: str):
         import matplotlib
         matplotlib.use('Agg')
 
@@ -81,14 +81,24 @@ class GraphDW:
             print("No opinions history to plot.")
             return
 
-        history_opinions = np.array(self.history_opinions)
-        plt.figure(figsize=(20, 12), dpi=150)
-        for i in range(history_opinions.shape[1]):
-            plt.plot(history_opinions[::1000, i], color='steelblue', linestyle='-', alpha=0.05, lw=0.5)
-        plt.title("Evolution of Opinions - Large Scale Simulation", fontsize=20)
-        plt.xlabel("Simulation Steps", fontsize=15)
-        plt.ylabel("Opinion Value", fontsize=15)
+        plt.figure(figsize=(8, 6), dpi=150)
+        sampled_history = np.array(self.history_opinions)[::3000]
+        x = np.linspace(0, 1, sampled_history.shape[0])
+
+        plt.scatter(np.zeros(sampled_history.shape[1]), sampled_history[0], color='green', s=8,label="initial opinions")
+        for i in range(sampled_history.shape[1]):
+            plt.plot(x, sampled_history[:, i], color='blue', alpha=0.03, linewidth=0.5)
+        plt.scatter(np.ones(sampled_history.shape[1]), sampled_history[-1], color='red', s=8, label="final opinions")
+
+        plt.scatter([], [], color='blue', s=8, label='updated opinions')
+
+        plt.title(title)
+        plt.xlabel("time step")
+        plt.ylabel("opinion")
+        plt.xlim(-0.02, 1.02)
         plt.ylim(-0.05, 1.05)
-        plt.grid(True, which='both', linestyle='--', alpha=0.2)
+        plt.grid()
+        plt.legend(loc='lower center', fontsize=8)
+        plt.tight_layout()
         plt.savefig(path, bbox_inches='tight', dpi=150)
         plt.close()

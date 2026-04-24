@@ -3,7 +3,7 @@ from hashlib import algorithms_available
 from graph_factory import GraphFactory
 from networkx.algorithms.community import (louvain_communities, modularity, k_clique_communities,
                                            greedy_modularity_communities, label_propagation_communities,
-                                           leiden_communities, asyn_fluidc)
+                                           asyn_fluidc)
 import networkx as nx
 
 algorithms = {
