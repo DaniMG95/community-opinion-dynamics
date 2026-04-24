@@ -1,1 +1,0 @@
-Average steps for 1000 simulations: 74255 - stdev 23736.752271707443
