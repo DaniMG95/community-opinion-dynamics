@@ -1,4 +1,4 @@
-from execute_monte_carlo import ExecuteMonteCarloDW
+from community_opinions_dynamics.execute_monte_carlo import ExecuteMonteCarloDW
 
 NODES = 1000
 EDGES = 5000
@@ -7,11 +7,11 @@ D = 0.01
 V_CONVERGENCE = 0.25
 NUM_EXECUTES = 1000
 SAVE_RESULTS = False
-P_INTER_LIST = [0.3, 0.5, 0.7, 0.9]
-CONFIDENCE_THRESHOLD_LIST = [0.10, 0.15, 0.20, 0.25, 0.30]
+# P_INTER_LIST = [0.3, 0.5, 0.7, 0.9]
+# CONFIDENCE_THRESHOLD_LIST = [0.10, 0.15, 0.20, 0.25, 0.30]
 
-# P_INTER_LIST = [0.3, 0.9]
-# CONFIDENCE_THRESHOLD_LIST = [0.10, 0.30]
+P_INTER_LIST = [0.3, 0.9]
+CONFIDENCE_THRESHOLD_LIST = [0.10, 0.30]
 
 import concurrent.futures
 
@@ -30,7 +30,8 @@ def run_simulation(params):
         v_convergence=V_CONVERGENCE,
         confidence_threshold=confidence_threshold,
         num_executes=NUM_EXECUTES,
-        save_results=SAVE_RESULTS
+        save_results=SAVE_RESULTS,
+        partition_average=50
     )
 
     average_steps = executor.execute()
