@@ -39,23 +39,6 @@ def overlapping_to_partition(G, communities):
 
     return partition
 
-def compute_modularity_k_clique(graph):
-    max_mod = 0
-    max_k = 0
-    for i in [3, 4, 5]:
-        communities = k_clique_communities(graph, k=i)
-        try:
-            communities = list(communities)
-            partition = overlapping_to_partition(graph, communities)
-            mod = modularity(graph, partition)
-        except:
-            pass
-        else:
-            if mod > max_mod:
-                max_mod = mod
-                max_k = i
-    return max_k, max_mod
-
 def compute_modularity_asyn_fluidc(graph):
     max_mod = 0
     max_k = 0

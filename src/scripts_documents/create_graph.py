@@ -35,16 +35,16 @@ Y_0_9_0_3 = [45200, 45400, 46200, 46425, 46180, 46250, 46357, 46400, 46666, 4664
              46937, 46900, 47022, 47026, 46945]
 
 
-draw_graph(x=X, y=Y_0_3_0_1, title="steps vs simulations ε = 0.1 and Inter. prob.=0.3",
+draw_graph(x=X, y=Y_0_3_0_1, title="steps vs simulations ε = 0.1 and p=0.3",
            xlabel="simulations", ylabel="average steps", path="steps_vs_simulations_0_1_0_3.png")
-draw_graph(x=X, y=Y_0_3_0_3, title="steps vs simulations ε = 0.3 and Inter. prob.=0.3",
+draw_graph(x=X, y=Y_0_3_0_3, title="steps vs simulations ε = 0.3 and p=0.3",
            xlabel="simulations", ylabel="average steps", path="steps_vs_simulations_0_3_0_3.png")
-draw_graph(x=X, y=Y_0_9_0_1, title="steps vs simulations ε = 0.1 and Inter. prob.=0.9",
+draw_graph(x=X, y=Y_0_9_0_1, title="steps vs simulations ε = 0.1 and p=0.9",
            xlabel="simulations", ylabel="average steps", path="steps_vs_simulations_0_1_0_9.png")
-draw_graph(x=X, y=Y_0_9_0_3, title="steps vs simulations ε = 0.3 and Inter. prob.=0.9",
+draw_graph(x=X, y=Y_0_9_0_3, title="steps vs simulations ε = 0.3 and p=0.9",
            xlabel="simulations", ylabel="average steps", path="steps_vs_simulations_0_3_0_9.png")
 
-create_graph_threshold()
+# create_graph_threshold()
 
 
 

@@ -1,5 +1,5 @@
-from graph_dw import GraphDW
-from graph_factory import GraphFactory
+from community_opinions_dynamics.graph_dw import GraphDW
+from community_opinions_dynamics.graph_factory import GraphFactory
 import statistics
 import os
 import shutil
@@ -17,7 +17,7 @@ class ExecuteMonteCarloDW:
         self.confidence_threshold = confidence_threshold
         self.num_executes = num_executes
         self.save_results = save_results
-        self.path_directory = f"{self.PATH_RESULTS}/p_{self.p_inter}_threshold_{self.confidence_threshold}"
+        self.path_directory = f"{self.PATH_RESULTS}/n_{nodes}_m_{edges}_k_{communities}_p_{self.p_inter}_threshold_{self.confidence_threshold}"
         if partition_average is None:
             self.partition_average = self.num_executes
         else:

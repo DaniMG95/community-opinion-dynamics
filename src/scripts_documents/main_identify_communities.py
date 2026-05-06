@@ -1,7 +1,7 @@
 from community_opinions_dynamics.graph_factory import GraphFactory
 from networkx.algorithms.community import (louvain_communities, modularity,
                                            greedy_modularity_communities, label_propagation_communities)
-from utils import compute_modularity_asyn_fluidc, compute_modularity_k_clique
+from utils import compute_modularity_asyn_fluidc
 import statistics
 
 
@@ -18,12 +18,11 @@ EDGES = 5000
 N_SIMULATORS = 100
 STEPS = 10
 COMMUNITIES = 10
-P_INTER = [0.3, 0.9]
+P_INTER = [0.3, 0.5, 0.7, 0.9]
 
 
 for p in P_INTER:
     history_modularity = {algorithm: [] for algorithm in algorithms.keys()}
-    history_modularity["k_clique"] = []
     history_modularity["asyn_fluidc"] = []
     k_values_clique = set()
     k_values_fluidc = set()
@@ -32,10 +31,6 @@ for p in P_INTER:
         print("Step:", i, "p_inter:", p)
         graph_factory = GraphFactory(NODES, EDGES, COMMUNITIES, p)
         graph_generated, _ = graph_factory.generate_graph()
-
-        k, mod = compute_modularity_k_clique(graph=graph_generated)
-        history_modularity["k_clique"].append(mod)
-        k_values_clique.add(k)
 
         k, mod = compute_modularity_asyn_fluidc(graph=graph_generated)
         history_modularity["asyn_fluidc"].append(mod)
