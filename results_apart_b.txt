@@ -1,0 +1,215 @@
+N 1000 M 500 P 0.3 Threshold 0.1
+Average steps for 1000 simulations: 2865 - stdev 776.4521091979066
+
+N 1000 M 500 P 0.3 Threshold 0.2
+Average steps for 1000 simulations: 8768.5 - stdev 3391.0406819893665
+
+N 1000 M 500 P 0.3 Threshold 0.3
+Average steps for 1000 simulations: 24449 - stdev 12191.247906819282
+
+N 1000 M 500 P 0.5 Threshold 0.1
+Average steps for 1000 simulations: 2854.5 - stdev 797.3176691040187
+
+N 1000 M 500 P 0.5 Threshold 0.2
+Average steps for 1000 simulations: 8623 - stdev 3090.942400777621
+
+N 1000 M 500 P 0.5 Threshold 0.3
+Average steps for 1000 simulations: 23612 - stdev 11060.053380557472
+
+N 1000 M 500 P 0.7 Threshold 0.1
+Average steps for 1000 simulations: 2875 - stdev 802.1960598996473
+
+N 1000 M 500 P 0.7 Threshold 0.2
+Average steps for 1000 simulations: 8393.5 - stdev 3038.6907363848977
+
+N 1000 M 500 P 0.7 Threshold 0.3
+Average steps for 1000 simulations: 23276 - stdev 11343.522358575377
+
+N 1000 M 500 P 0.9 Threshold 0.1
+Average steps for 1000 simulations: 2842 - stdev 793.5147545355825
+
+N 1000 M 500 P 0.9 Threshold 0.2
+Average steps for 1000 simulations: 8519 - stdev 3253.032619144976
+
+N 1000 M 500 P 0.9 Threshold 0.3
+Average steps for 1000 simulations: 21615.5 - stdev 9624.528107460193
+
+N 1000 M 1000 P 0.3 Threshold 0.1
+Average steps for 1000 simulations: 10242 - stdev 3176.7164694897665
+
+N 1000 M 1000 P 0.3 Threshold 0.2
+Average steps for 1000 simulations: 147677 - stdev 125627.20591442709
+
+N 1000 M 1000 P 0.3 Threshold 0.3
+Average steps for 1000 simulations: 113401 - stdev 25720.99859587043
+
+N 1000 M 1000 P 0.5 Threshold 0.1
+Average steps for 1000 simulations: 9850 - stdev 2827.6307212037955
+
+N 1000 M 1000 P 0.5 Threshold 0.2
+Average steps for 1000 simulations: 139821 - stdev 112622.1412765079
+
+N 1000 M 1000 P 0.5 Threshold 0.3
+Average steps for 1000 simulations: 113583 - stdev 24979.212799287172
+
+N 1000 M 1000 P 0.7 Threshold 0.1
+Average steps for 1000 simulations: 9837 - stdev 2910.825296012096
+
+N 1000 M 1000 P 0.7 Threshold 0.2
+Average steps for 1000 simulations: 128490 - stdev 108595.51042692734
+
+N 1000 M 1000 P 0.7 Threshold 0.3
+Average steps for 1000 simulations: 119075 - stdev 27188.648322371555
+
+N 1000 M 1000 P 0.9 Threshold 0.1
+Average steps for 1000 simulations: 9857 - stdev 2958.260012626054
+
+N 1000 M 1000 P 0.9 Threshold 0.2
+Average steps for 1000 simulations: 80997 - stdev 54664.881233203465
+
+N 1000 M 1000 P 0.9 Threshold 0.3
+Average steps for 1000 simulations: 146547 - stdev 40424.94238668705
+
+N 1000 M 2500 P 0.3 Threshold 0.1
+Average steps for 1000 simulations: 586127.5 - stdev 616686.9041348953
+
+N 1000 M 2500 P 0.3 Threshold 0.2
+Average steps for 1000 simulations: 532967.5 - stdev 758618.0620429544
+
+N 1000 M 2500 P 0.3 Threshold 0.3
+Average steps for 1000 simulations: 54267.5 - stdev 8742.632748627691
+
+N 1000 M 2500 P 0.5 Threshold 0.1
+Average steps for 1000 simulations: 537167.5 - stdev 597501.8235310022
+
+N 1000 M 2500 P 0.5 Threshold 0.2
+Average steps for 1000 simulations: 508532.5 - stdev 727181.2499398028
+
+N 1000 M 2500 P 0.5 Threshold 0.3
+Average steps for 1000 simulations: 53607.5 - stdev 8718.124766797586
+
+N 1000 M 2500 P 0.7 Threshold 0.1
+Average steps for 1000 simulations: 460057.5 - stdev 539433.6419781842
+
+N 1000 M 2500 P 0.7 Threshold 0.2
+Average steps for 1000 simulations: 441632.5 - stdev 621352.9558064719
+
+N 1000 M 2500 P 0.7 Threshold 0.3
+Average steps for 1000 simulations: 54615 - stdev 8697.840388707269
+
+N 1000 M 2500 P 0.9 Threshold 0.1
+Average steps for 1000 simulations: 167340 - stdev 191722.76734785445
+
+N 1000 M 2500 P 0.9 Threshold 0.2
+Average steps for 1000 simulations: 402837.5 - stdev 530272.9667473282
+
+N 1000 M 2500 P 0.9 Threshold 0.3
+Average steps for 1000 simulations: 59100 - stdev 9643.417210485892
+
+N 1000 M 5000 P 0.3 Threshold 0.1
+Average steps for 1000 simulations: 553600 - stdev 708538.1544534608
+
+N 1000 M 5000 P 0.3 Threshold 0.2
+Average steps for 1000 simulations: 74785 - stdev 13831.850747282342
+
+N 1000 M 5000 P 0.3 Threshold 0.3
+Average steps for 1000 simulations: 42300 - stdev 7541.01232374453
+
+N 1000 M 5000 P 0.5 Threshold 0.1
+Average steps for 1000 simulations: 526675 - stdev 671203.6454822848
+
+N 1000 M 5000 P 0.5 Threshold 0.2
+Average steps for 1000 simulations: 74840 - stdev 12620.763989699026
+
+N 1000 M 5000 P 0.5 Threshold 0.3
+Average steps for 1000 simulations: 41850 - stdev 7216.618292495425
+
+N 1000 M 5000 P 0.7 Threshold 0.1
+Average steps for 1000 simulations: 562190 - stdev 667229.1200169538
+
+N 1000 M 5000 P 0.7 Threshold 0.2
+Average steps for 1000 simulations: 78225 - stdev 16404.068655930103
+
+N 1000 M 5000 P 0.7 Threshold 0.3
+Average steps for 1000 simulations: 41965 - stdev 7339.457925667442
+
+N 1000 M 5000 P 0.9 Threshold 0.1
+Average steps for 1000 simulations: 781455 - stdev 646492.4287533733
+
+N 1000 M 5000 P 0.9 Threshold 0.2
+Average steps for 1000 simulations: 113840 - stdev 31378.958539745054
+
+N 1000 M 5000 P 0.9 Threshold 0.3
+Average steps for 1000 simulations: 46720 - stdev 7331.121697622087
+
+N 1000 M 7500 P 0.3 Threshold 0.1
+Average steps for 1000 simulations: 250575 - stdev 321522.62155433354
+
+N 1000 M 7500 P 0.3 Threshold 0.2
+Average steps for 1000 simulations: 67845 - stdev 11614.791361810094
+
+N 1000 M 7500 P 0.3 Threshold 0.3
+Average steps for 1000 simulations: 38017.5 - stdev 6306.005824565932
+
+N 1000 M 7500 P 0.5 Threshold 0.1
+Average steps for 1000 simulations: 276990 - stdev 386046.12290373934
+
+N 1000 M 7500 P 0.5 Threshold 0.2
+Average steps for 1000 simulations: 69075 - stdev 12024.515123861085
+
+N 1000 M 7500 P 0.5 Threshold 0.3
+Average steps for 1000 simulations: 38130 - stdev 4316.738842486795
+
+N 1000 M 7500 P 0.7 Threshold 0.1
+Average steps for 1000 simulations: 276900 - stdev 308454.95531675196
+
+N 1000 M 7500 P 0.7 Threshold 0.2
+Average steps for 1000 simulations: 71355 - stdev 12996.456551032781
+
+N 1000 M 7500 P 0.7 Threshold 0.3
+Average steps for 1000 simulations: 38512.5 - stdev 4196.570618368641
+
+N 1000 M 7500 P 0.9 Threshold 0.1
+Average steps for 1000 simulations: 529995 - stdev 519550.89558974694
+
+N 1000 M 7500 P 0.9 Threshold 0.2
+Average steps for 1000 simulations: 103395 - stdev 24019.281856477326
+
+N 1000 M 7500 P 0.9 Threshold 0.3
+Average steps for 1000 simulations: 44932.5 - stdev 5768.229036386837
+
+N 1000 M 10000 P 0.3 Threshold 0.1
+Average steps for 1000 simulations: 172020 - stdev 160919.90186056794
+
+N 1000 M 10000 P 0.3 Threshold 0.2
+Average steps for 1000 simulations: 62690 - stdev 11866.115822151101
+
+N 1000 M 10000 P 0.3 Threshold 0.3
+Average steps for 1000 simulations: 40500 - stdev 3945.321985030571
+
+N 1000 M 10000 P 0.5 Threshold 0.1
+Average steps for 1000 simulations: 189690 - stdev 271411.25247116777
+
+N 1000 M 10000 P 0.5 Threshold 0.2
+Average steps for 1000 simulations: 63510 - stdev 12005.166555447035
+
+N 1000 M 10000 P 0.5 Threshold 0.3
+Average steps for 1000 simulations: 40340 - stdev 3239.582518611757
+
+N 1000 M 10000 P 0.7 Threshold 0.1
+Average steps for 1000 simulations: 192980 - stdev 167055.76083220606
+
+N 1000 M 10000 P 0.7 Threshold 0.2
+Average steps for 1000 simulations: 65490 - stdev 13503.415947168414
+
+N 1000 M 10000 P 0.7 Threshold 0.3
+Average steps for 1000 simulations: 40700 - stdev 3052.756020274028
+
+N 1000 M 10000 P 0.9 Threshold 0.1
+Average steps for 1000 simulations: 385060 - stdev 350387.45378190663
+
+N 1000 M 10000 P 0.9 Threshold 0.2
+Average steps for 1000 simulations: 99550 - stdev 20734.691399377698
+
+N 1000 M 10000 P 0.9 Threshold 0.3
+Average steps for 1000 simulations: 47210 - stdev 6399.75443723092
