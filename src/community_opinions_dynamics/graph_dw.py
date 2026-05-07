@@ -88,7 +88,6 @@ class GraphDW:
         sampled_history = history[::step]
         x = np.arange(0, len(history), step)
 
-        # Asegurar que el último estado real está incluido
         if x[-1] != len(history) - 1:
             sampled_history = np.vstack([sampled_history, history[-1]])
             x = np.append(x, len(history) - 1)
@@ -106,9 +105,6 @@ class GraphDW:
             }
         )
 
-        # =========================
-        # GRÁFICA PRINCIPAL
-        # =========================
         ax.scatter(
             np.zeros(n_agents),
             sampled_history[0],
@@ -154,36 +150,34 @@ class GraphDW:
         )
 
         bin_centers = (bins[:-1] + bins[1:]) / 2
-        bin_height = bins[1] - bins[0]
-
-        if counts.max() > 0:
-            counts_scaled = counts / counts.max()
-        else:
-            counts_scaled = counts.astype(float)
-
-        top_threshold = 0.8
-        colors = ['red' if y >= top_threshold else 'green' for y in bin_centers]
-
-        ax_hist.barh(
-            bin_centers,
-            counts_scaled,
-            height=bin_height * 0.9,
-            color=colors,
-            edgecolor=colors,
-            alpha=0.45,
-            linewidth=0.3
-        )
 
         ax_hist.set_xlim(0, 1.05)
         ax_hist.set_xticks([])
         ax_hist.grid(False)
         ax_hist.set_ylim(0, 1)
 
-        ax_hist.spines["left"].set_color("green")
-        ax_hist.spines["left"].set_linewidth(2)
+        ax_hist.spines["left"].set_visible(False)
         ax_hist.spines["top"].set_visible(False)
         ax_hist.spines["bottom"].set_visible(False)
         ax_hist.spines["right"].set_visible(False)
+
+        max_count = counts.max() if counts.max() > 0 else 1
+
+        freq_threshold = 0.8
+
+        for c, y in zip(counts, bin_centers):
+            if c > 0:
+                relative_freq = c / max_count
+                color = "red" if relative_freq > freq_threshold else "green"
+
+                ax_hist.hlines(
+                    y=y,
+                    xmin=0,
+                    xmax=relative_freq,
+                    color=color,
+                    linewidth=2.5,
+                    alpha=0.9
+                )
 
         yticks = np.linspace(0, 1, 6)
         ax_hist.set_yticks(yticks)
@@ -200,14 +194,11 @@ class GraphDW:
             labelsize=8
         )
 
-        ax_hist.set_ylabel("")
-
         ax_hist_top = ax_hist.secondary_xaxis('top')
         ax_hist_top.set_xticks([0.01, 1.0])
         ax_hist_top.set_xticklabels(['1%', '100%'])
         ax_hist_top.tick_params(axis='x', labelsize=7, pad=2, length=0)
 
-        # Texto exterior a la derecha
         fig.text(
             0.995, 0.5,
             "final distribution",
