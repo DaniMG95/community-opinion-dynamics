@@ -77,28 +77,139 @@ class GraphDW:
 
         import matplotlib.pyplot as plt
         import numpy as np
+
         if not self.history_opinions:
             print("No opinions history to plot.")
             return
 
-        plt.figure(figsize=(8, 6), dpi=150)
-        sampled_history = np.array(self.history_opinions)[::3000]
-        x = np.linspace(0, 1, sampled_history.shape[0])
+        history = np.array(self.history_opinions)
+        step = 4000
 
-        plt.scatter(np.zeros(sampled_history.shape[1]), sampled_history[0], color='green', s=8,label="initial opinions")
-        for i in range(sampled_history.shape[1]):
-            plt.plot(x, sampled_history[:, i], color='blue', alpha=0.03, linewidth=0.5)
-        plt.scatter(np.ones(sampled_history.shape[1]), sampled_history[-1], color='red', s=8, label="final opinions")
+        sampled_history = history[::step]
+        x = np.arange(0, len(history), step)
 
-        plt.scatter([], [], color='blue', s=8, label='updated opinions')
+        if x[-1] != len(history) - 1:
+            sampled_history = np.vstack([sampled_history, history[-1]])
+            x = np.append(x, len(history) - 1)
 
-        plt.title(title)
-        plt.xlabel("time step")
-        plt.ylabel("opinion")
-        plt.xlim(-0.02, 1.02)
-        plt.ylim(-0.05, 1.05)
-        plt.grid()
-        plt.legend(loc='lower center', fontsize=8)
-        plt.tight_layout()
-        plt.savefig(path, bbox_inches='tight', dpi=150)
+        n_agents = sampled_history.shape[1]
+
+        fig, (ax, ax_hist) = plt.subplots(
+            1, 2,
+            figsize=(8.5, 6),
+            dpi=150,
+            sharey=True,
+            gridspec_kw={
+                "width_ratios": [28, 1.4],
+                "wspace": 0.03
+            }
+        )
+
+        ax.scatter(
+            np.zeros(n_agents),
+            sampled_history[0],
+            color='green',
+            s=8,
+            label='initial opinions',
+            zorder=3
+        )
+
+        for i in range(n_agents):
+            ax.plot(
+                x,
+                sampled_history[:, i],
+                color='blue',
+                alpha=0.03,
+                linewidth=0.5
+            )
+
+        ax.scatter(
+            np.full(n_agents, x[-1]),
+            sampled_history[-1],
+            color='red',
+            s=8,
+            label='final opinions',
+            zorder=3
+        )
+
+        ax.scatter([], [], color='blue', s=8, label='updated opinions')
+
+        ax.set_title(title)
+        ax.set_xlabel("time step")
+        ax.set_ylabel("opinion")
+        ax.set_ylim(0, 1)
+        ax.grid(alpha=0.6)
+        ax.legend(loc="lower center", fontsize=8)
+
+        final_opinions = history[-1]
+
+        counts, bins = np.histogram(
+            final_opinions,
+            bins=40,
+            range=(0, 1)
+        )
+
+        bin_centers = (bins[:-1] + bins[1:]) / 2
+
+        ax_hist.set_xlim(0, 1.05)
+        ax_hist.set_xticks([])
+        ax_hist.grid(False)
+        ax_hist.set_ylim(0, 1)
+
+        ax_hist.spines["left"].set_visible(False)
+        ax_hist.spines["top"].set_visible(False)
+        ax_hist.spines["bottom"].set_visible(False)
+        ax_hist.spines["right"].set_visible(False)
+
+        max_count = counts.max() if counts.max() > 0 else 1
+
+        freq_threshold = 0.8
+
+        for c, y in zip(counts, bin_centers):
+            if c > 0:
+                relative_freq = c / max_count
+                color = "red" if relative_freq > freq_threshold else "green"
+
+                ax_hist.hlines(
+                    y=y,
+                    xmin=0,
+                    xmax=relative_freq,
+                    color=color,
+                    linewidth=2.5,
+                    alpha=0.9
+                )
+
+        yticks = np.linspace(0, 1, 6)
+        ax_hist.set_yticks(yticks)
+        ax_hist.set_yticklabels([f"{v:.1f}" for v in yticks])
+
+        ax_hist.yaxis.tick_right()
+        ax_hist.yaxis.set_label_position("right")
+        ax_hist.tick_params(
+            axis='y',
+            right=True,
+            labelright=True,
+            left=False,
+            labelleft=False,
+            labelsize=8
+        )
+
+        ax_hist_top = ax_hist.secondary_xaxis('top')
+        ax_hist_top.set_xticks([0.01, 1.0])
+        ax_hist_top.set_xticklabels(['1%', '100%'])
+        ax_hist_top.tick_params(axis='x', labelsize=7, pad=2, length=0)
+
+        fig.text(
+            0.995, 0.5,
+            "final distribution",
+            rotation=90,
+            ha="center",
+            va="center",
+            fontsize=9,
+            color="black"
+        )
+
+        plt.subplots_adjust(right=0.95)
+
+        plt.savefig(path, bbox_inches="tight", dpi=150)
         plt.close()

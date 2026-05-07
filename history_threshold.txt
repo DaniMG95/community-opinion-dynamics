@@ -1,0 +1,119 @@
+P 0.3 E 0.05
+Average steps for 1000 simulations: 94510 - stdev 34092.847082961875
+
+P 0.3 E 0.1
+Average steps for 1000 simulations: 519240 - stdev 585554.8624141865
+
+P 0.3 E 0.15
+Average steps for 1000 simulations: 246400 - stdev 433656.4284060573
+
+P 0.3 E 0.2
+Average steps for 1000 simulations: 75130 - stdev 14024.256835204487
+
+P 0.3 E 0.25
+Average steps for 1000 simulations: 80370 - stdev 129294.54814562052
+
+P 0.3 E 0.3
+Average steps for 1000 simulations: 41585 - stdev 7170.36883215844
+
+P 0.3 E 0.35
+Average steps for 1000 simulations: 36960 - stdev 8107.041638237966
+
+P 0.3 E 0.4
+Average steps for 1000 simulations: 34565 - stdev 8161.027960825608
+
+P 0.3 E 0.45
+Average steps for 1000 simulations: 34075 - stdev 9041.632934715173
+
+P 0.3 E 0.5
+Average steps for 1000 simulations: 33575 - stdev 9622.211905895752
+
+P 0.5 E 0.05
+Average steps for 1000 simulations: 91660 - stdev 31155.498151450975
+
+P 0.5 E 0.1
+Average steps for 1000 simulations: 515575 - stdev 568434.9678614852
+
+P 0.5 E 0.15
+Average steps for 1000 simulations: 246600 - stdev 413178.4801468446
+
+P 0.5 E 0.2
+Average steps for 1000 simulations: 75690 - stdev 19820.866952955585
+
+P 0.5 E 0.25
+Average steps for 1000 simulations: 82150 - stdev 162144.12791778252
+
+P 0.5 E 0.3
+Average steps for 1000 simulations: 41715 - stdev 7364.646156673993
+
+P 0.5 E 0.35
+Average steps for 1000 simulations: 36685 - stdev 7806.838138562995
+
+P 0.5 E 0.4
+Average steps for 1000 simulations: 34325 - stdev 8113.889955515185
+
+P 0.5 E 0.45
+Average steps for 1000 simulations: 34260 - stdev 9454.72325305145
+
+P 0.5 E 0.5
+Average steps for 1000 simulations: 32955 - stdev 8990.205715043388
+
+P 0.7 E 0.05
+Average steps for 1000 simulations: 87545 - stdev 28812.81230899117
+
+P 0.7 E 0.1
+Average steps for 1000 simulations: 591815 - stdev 729703.2599780699
+
+P 0.7 E 0.15
+Average steps for 1000 simulations: 236645 - stdev 405378.4042417968
+
+P 0.7 E 0.2
+Average steps for 1000 simulations: 78095 - stdev 14324.84471734951
+
+P 0.7 E 0.25
+Average steps for 1000 simulations: 77035 - stdev 116263.71328159972
+
+P 0.7 E 0.3
+Average steps for 1000 simulations: 41665 - stdev 6957.095383576121
+
+P 0.7 E 0.35
+Average steps for 1000 simulations: 36275 - stdev 7456.874679111885
+
+P 0.7 E 0.4
+Average steps for 1000 simulations: 34285 - stdev 8416.32993706934
+
+P 0.7 E 0.45
+Average steps for 1000 simulations: 33300 - stdev 8887.574977967217
+
+P 0.7 E 0.5
+Average steps for 1000 simulations: 32590 - stdev 9095.307835616375
+
+P 0.9 E 0.05
+Average steps for 1000 simulations: 71575 - stdev 20148.2089855482
+
+P 0.9 E 0.1
+Average steps for 1000 simulations: 757395 - stdev 611270.1859368043
+
+P 0.9 E 0.15
+Average steps for 1000 simulations: 294045 - stdev 323447.4938166259
+
+P 0.9 E 0.2
+Average steps for 1000 simulations: 113505 - stdev 29039.33983854072
+
+P 0.9 E 0.25
+Average steps for 1000 simulations: 93475 - stdev 34664.838468194626
+
+P 0.9 E 0.3
+Average steps for 1000 simulations: 46800 - stdev 7142.199311907433
+
+P 0.9 E 0.35
+Average steps for 1000 simulations: 37575 - stdev 7238.561443530874
+
+P 0.9 E 0.4
+Average steps for 1000 simulations: 35145 - stdev 7894.0668410706585
+
+P 0.9 E 0.45
+Average steps for 1000 simulations: 32940 - stdev 7801.7477059481525
+
+P 0.9 E 0.5
+Average steps for 1000 simulations: 33535 - stdev 9252.80440674012
