@@ -168,7 +168,7 @@ class GraphDW:
         for c, y in zip(counts, bin_centers):
             if c > 0:
                 relative_freq = c / max_count
-                color = "red" if relative_freq > freq_threshold else "green"
+                color = "red"
 
                 ax_hist.hlines(
                     y=y,
