@@ -7,23 +7,25 @@ D = 0.01
 V_CONVERGENCE = 0.25
 NUM_EXECUTES = 1000
 SAVE_RESULTS = False
+TOL = 0.1
 # P_INTER_LIST = [0.3, 0.5, 0.7, 0.9]
 # CONFIDENCE_THRESHOLD_LIST = [0.10, 0.15, 0.20, 0.25, 0.30]
 
-P_INTER_LIST = [0.3, 0.9]
-CONFIDENCE_THRESHOLD_LIST = [0.10, 0.30]
+P_INTER_LIST = [0.3, 0.5, 0.7, 0.9]
+NODES_LIST = [100, 200, 500, 1000]
+CONFIDENCE_THRESHOLD_LIST = [0.10, 0.2, 0.30]
 
 import concurrent.futures
 
 
 def run_simulation(params):
-    p_inter, confidence_threshold = params
+    p_inter, confidence_threshold, nodes = params
 
     print(f"Iniciando: p_inter={p_inter}, threshold={confidence_threshold}")
 
     executor = ExecuteMonteCarloDW(
-        nodes=NODES,
-        edges=EDGES,
+        nodes=nodes,
+        edges=nodes*5,
         communities=COMMUNITIES,
         p_inter=p_inter,
         d=D,
@@ -31,7 +33,7 @@ def run_simulation(params):
         confidence_threshold=confidence_threshold,
         num_executes=NUM_EXECUTES,
         save_results=SAVE_RESULTS,
-        partition_average=50
+        tol=TOL
     )
 
     average_steps = executor.execute()
@@ -41,13 +43,14 @@ def run_simulation(params):
 if __name__ == "__main__":
 
     tasks = []
-    for p_inter in P_INTER_LIST:
-        for ct in CONFIDENCE_THRESHOLD_LIST:
-            tasks.append((p_inter, ct))
+    for nodes in NODES_LIST:
+        for p_inter in P_INTER_LIST:
+            for ct in CONFIDENCE_THRESHOLD_LIST:
+                tasks.append((p_inter, ct, nodes))
 
     print(f"Lanzando {len(tasks)} configuraciones en paralelo...")
 
-    with concurrent.futures.ProcessPoolExecutor(max_workers=10) as pool:
+    with concurrent.futures.ProcessPoolExecutor(max_workers=15) as pool:
         results = list(pool.map(run_simulation, tasks))
 
     print("\n--- RESUMEN DE RESULTADOS ---")

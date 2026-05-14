@@ -35,10 +35,10 @@ for i in range(NUM_EXECUTES):
         graph_dw_clone_0_1.save_history_opinions = True
         graph_dw_clone_0_3.save_history_opinions = True
 
-        graph_dw_clone_0_1.apply_dw(v_convergence=V_CONVERGENCE, confidence_threshold=0.1, max_steps=max_steps)
+        graph_dw_clone_0_1.apply_dw_max_steps(v_convergence=V_CONVERGENCE, confidence_threshold=0.1, max_steps=max_steps)
         graph_dw_clone_0_1.draw_opinions(path=f"{i}_opinions_history_p_inter_{p_inter}_threshold_0_1.png",
                                          title=f"ε = 0.1 p={p_inter}")
-        graph_dw_clone_0_3.apply_dw(v_convergence=V_CONVERGENCE, confidence_threshold=0.3, max_steps=max_steps)
+        graph_dw_clone_0_3.apply_dw_max_steps(v_convergence=V_CONVERGENCE, confidence_threshold=0.3, max_steps=max_steps)
         graph_dw_clone_0_3.draw_opinions(path=f"{i}_opinions_history_p_inter_{p_inter}_threshold_0_3_{i}.png",
                                          title=f"ε = 0.3 and p={p_inter}")
         del graph_dw_clone_0_1

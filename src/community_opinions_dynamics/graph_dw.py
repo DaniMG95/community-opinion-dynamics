@@ -39,25 +39,64 @@ class GraphDW:
         plt.axis('off')
         plt.show()
 
-    def apply_dw(self, v_convergence, confidence_threshold, max_steps=0):
+    def get_opinions(self):
+        return [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
+
+
+    def count_opinion_clusters(self, tol=0.01):
+        opinions = sorted(self.get_opinions())
+
+        if not opinions:
+            return 0
+        clusters = 1
+        for i in range(1, len(opinions)):
+            if opinions[i] - opinions[i - 1] > tol:
+                clusters += 1
+        return clusters
+
+
+    def has_consensus(self, tol=0.01):
+        return self.count_opinion_clusters(tol=tol) == 1
+
+    def apply_dw_max_steps(self, v_convergence, confidence_threshold, max_steps):
+        edges = list(self.graph.edges)
+        steps = 0
+        if self.save_history_opinions:
+            opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
+            self.history_opinions.append(opinions)
+        while max_steps>steps:
+            random.shuffle(edges)
+            for random_edge in edges:
+                if steps >= max_steps:
+                    break
+                node1, node2 = random_edge
+                opinion1 = self.graph.nodes[node1]['opinion']
+                opinion2 = self.graph.nodes[node2]['opinion']
+                if abs(opinion1 - opinion2) < confidence_threshold:
+                    diff = v_convergence * (opinion2 - opinion1)
+                    self.graph.nodes[node1]['opinion'] += diff
+                    self.graph.nodes[node2]['opinion'] -= diff
+                steps += 1
+                if self.save_history_opinions:
+                    opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
+                    self.history_opinions.append(opinions)
+        return steps
+
+    def apply_dw(self, v_convergence, confidence_threshold):
         edges = list(self.graph.edges)
         steps = 0
         max_diff = 100000
         if self.save_history_opinions:
             opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
             self.history_opinions.append(opinions)
-        can_break = False
-        while max_diff > self.d or max_steps>steps:
+        while max_diff > self.d:
             random.shuffle(edges)
             max_diff = 0
             for random_edge in edges:
-                if can_break and steps >= max_steps:
-                    max_diff = -1
-                    break
                 node1, node2 = random_edge
                 opinion1 = self.graph.nodes[node1]['opinion']
                 opinion2 = self.graph.nodes[node2]['opinion']
-                if abs(opinion1 - opinion2) <= confidence_threshold:
+                if abs(opinion1 - opinion2) < confidence_threshold:
                     diff = v_convergence * (opinion2 - opinion1)
                     self.graph.nodes[node1]['opinion'] += diff
                     self.graph.nodes[node2]['opinion'] -= diff
@@ -67,8 +106,6 @@ class GraphDW:
                 if self.save_history_opinions:
                     opinions = [self.graph.nodes[node]['opinion'] for node in self.graph.nodes]
                     self.history_opinions.append(opinions)
-            if not can_break and max_steps and max_diff < self.d:
-                can_break = True
         return steps
 
     def draw_opinions(self, path: str, title: str):
