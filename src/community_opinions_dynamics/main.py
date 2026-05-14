@@ -9,7 +9,7 @@ NUM_EXECUTES = 1000
 SAVE_RESULTS = False
 P_INTER_LIST = [0.3, 0.5, 0.7, 0.9]
 CONFIDENCE_THRESHOLD_LIST = [0.10, 0.15, 0.20, 0.25, 0.30]
-TOL = 0.1
+EPS = 0.1
 
 
 import concurrent.futures
@@ -30,7 +30,7 @@ def run_simulation(params):
         confidence_threshold=confidence_threshold,
         num_executes=NUM_EXECUTES,
         save_results=SAVE_RESULTS,
-        tool=TOL,
+        eps=EPS,
         partition_average=50
     )
 

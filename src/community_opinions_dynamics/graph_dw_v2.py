@@ -1,5 +1,6 @@
 import numpy as np
 from numba import njit
+from sklearn.cluster import DBSCAN
 
 
 @njit
@@ -168,22 +169,13 @@ class GraphDWOptimized:
     def get_final_opinions(self):
         return self.opinions.copy()
 
-    def count_opinion_clusters(self, tol=0.01):
-        opinions = np.sort(self.opinions)
+    def count_opinion_clusters_dbscan(self, eps=0.02, min_samples=1):
+        x = np.array(self.get_final_opinions()).reshape(-1, 1)
+        labels = DBSCAN(eps=eps, min_samples=min_samples).fit_predict(x)
+        return len(set(labels))
 
-        if len(opinions) == 0:
-            return 0
-
-        clusters = 1
-
-        for i in range(1, len(opinions)):
-            if opinions[i] - opinions[i - 1] > tol:
-                clusters += 1
-
-        return clusters
-
-    def has_consensus(self, tol=0.01):
-        return self.count_opinion_clusters(tol=tol) == 1
+    def has_consensus(self, eps=0.02):
+        return self.count_opinion_clusters_dbscan(eps=eps) == 1
 
     def get_sweeps(self, steps):
         return steps / len(self.edges_u)

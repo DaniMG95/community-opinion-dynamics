@@ -1,0 +1,1 @@
+Average steps for 1000 simulations: 9831 - stdev 2296.4565558078193 || numbers_clusters 2.532 - stdev_clusters 0.7730288310105734
