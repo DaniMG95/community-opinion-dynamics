@@ -1,215 +1,1233 @@
-N 1000 M 500 P 0.3 Threshold 0.1
-Average steps for 1000 simulations: 2865 - stdev 776.4521091979066
+===== N 1000 M 500 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 2892 - stdev 781.6309531658447 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 500 P 0.3 Threshold 0.2
-Average steps for 1000 simulations: 8768.5 - stdev 3391.0406819893665
 
-N 1000 M 500 P 0.3 Threshold 0.3
-Average steps for 1000 simulations: 24449 - stdev 12191.247906819282
+===== N 1000 M 500 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 2867 - stdev 796.5208380484753 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 500 P 0.5 Threshold 0.1
-Average steps for 1000 simulations: 2854.5 - stdev 797.3176691040187
 
-N 1000 M 500 P 0.5 Threshold 0.2
-Average steps for 1000 simulations: 8623 - stdev 3090.942400777621
+===== N 1000 M 500 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 2891.5 - stdev 779.15648931061 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 500 P 0.5 Threshold 0.3
-Average steps for 1000 simulations: 23612 - stdev 11060.053380557472
 
-N 1000 M 500 P 0.7 Threshold 0.1
-Average steps for 1000 simulations: 2875 - stdev 802.1960598996473
+===== N 1000 M 500 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 2854.5 - stdev 765.6147307333604 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 500 P 0.7 Threshold 0.2
-Average steps for 1000 simulations: 8393.5 - stdev 3038.6907363848977
 
-N 1000 M 500 P 0.7 Threshold 0.3
-Average steps for 1000 simulations: 23276 - stdev 11343.522358575377
 
-N 1000 M 500 P 0.9 Threshold 0.1
-Average steps for 1000 simulations: 2842 - stdev 793.5147545355825
 
-N 1000 M 500 P 0.9 Threshold 0.2
-Average steps for 1000 simulations: 8519 - stdev 3253.032619144976
 
-N 1000 M 500 P 0.9 Threshold 0.3
-Average steps for 1000 simulations: 21615.5 - stdev 9624.528107460193
 
-N 1000 M 1000 P 0.3 Threshold 0.1
-Average steps for 1000 simulations: 10242 - stdev 3176.7164694897665
 
-N 1000 M 1000 P 0.3 Threshold 0.2
-Average steps for 1000 simulations: 147677 - stdev 125627.20591442709
 
-N 1000 M 1000 P 0.3 Threshold 0.3
-Average steps for 1000 simulations: 113401 - stdev 25720.99859587043
+===== N 1000 M 500 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 8779 - stdev 3345.4971755108913 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 1000 P 0.5 Threshold 0.1
-Average steps for 1000 simulations: 9850 - stdev 2827.6307212037955
 
-N 1000 M 1000 P 0.5 Threshold 0.2
-Average steps for 1000 simulations: 139821 - stdev 112622.1412765079
 
-N 1000 M 1000 P 0.5 Threshold 0.3
-Average steps for 1000 simulations: 113583 - stdev 24979.212799287172
+===== N 1000 M 500 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 8752 - stdev 3337.8341985690568 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 1000 P 0.7 Threshold 0.1
-Average steps for 1000 simulations: 9837 - stdev 2910.825296012096
 
-N 1000 M 1000 P 0.7 Threshold 0.2
-Average steps for 1000 simulations: 128490 - stdev 108595.51042692734
+===== N 1000 M 500 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 8576 - stdev 3015.2638053437076 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 1000 P 0.7 Threshold 0.3
-Average steps for 1000 simulations: 119075 - stdev 27188.648322371555
 
-N 1000 M 1000 P 0.9 Threshold 0.1
-Average steps for 1000 simulations: 9857 - stdev 2958.260012626054
+===== N 1000 M 500 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 8323 - stdev 2993.096996361733 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 1000 P 0.9 Threshold 0.2
-Average steps for 1000 simulations: 80997 - stdev 54664.881233203465
 
-N 1000 M 1000 P 0.9 Threshold 0.3
-Average steps for 1000 simulations: 146547 - stdev 40424.94238668705
 
-N 1000 M 2500 P 0.3 Threshold 0.1
-Average steps for 1000 simulations: 586127.5 - stdev 616686.9041348953
 
-N 1000 M 2500 P 0.3 Threshold 0.2
-Average steps for 1000 simulations: 532967.5 - stdev 758618.0620429544
 
-N 1000 M 2500 P 0.3 Threshold 0.3
-Average steps for 1000 simulations: 54267.5 - stdev 8742.632748627691
 
-N 1000 M 2500 P 0.5 Threshold 0.1
-Average steps for 1000 simulations: 537167.5 - stdev 597501.8235310022
 
-N 1000 M 2500 P 0.5 Threshold 0.2
-Average steps for 1000 simulations: 508532.5 - stdev 727181.2499398028
+===== N 1000 M 500 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 24018.5 - stdev 12171.649715909787 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 2500 P 0.5 Threshold 0.3
-Average steps for 1000 simulations: 53607.5 - stdev 8718.124766797586
 
-N 1000 M 2500 P 0.7 Threshold 0.1
-Average steps for 1000 simulations: 460057.5 - stdev 539433.6419781842
+===== N 1000 M 500 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 24367 - stdev 11214.190522238734 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 2500 P 0.7 Threshold 0.2
-Average steps for 1000 simulations: 441632.5 - stdev 621352.9558064719
 
-N 1000 M 2500 P 0.7 Threshold 0.3
-Average steps for 1000 simulations: 54615 - stdev 8697.840388707269
+===== N 1000 M 500 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 22928 - stdev 10520.908017158286 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 2500 P 0.9 Threshold 0.1
-Average steps for 1000 simulations: 167340 - stdev 191722.76734785445
 
-N 1000 M 2500 P 0.9 Threshold 0.2
-Average steps for 1000 simulations: 402837.5 - stdev 530272.9667473282
+===== N 1000 M 500 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 21395.5 - stdev 9240.439138128959 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 2500 P 0.9 Threshold 0.3
-Average steps for 1000 simulations: 59100 - stdev 9643.417210485892
 
-N 1000 M 5000 P 0.3 Threshold 0.1
-Average steps for 1000 simulations: 553600 - stdev 708538.1544534608
 
-N 1000 M 5000 P 0.3 Threshold 0.2
-Average steps for 1000 simulations: 74785 - stdev 13831.850747282342
 
-N 1000 M 5000 P 0.3 Threshold 0.3
-Average steps for 1000 simulations: 42300 - stdev 7541.01232374453
 
-N 1000 M 5000 P 0.5 Threshold 0.1
-Average steps for 1000 simulations: 526675 - stdev 671203.6454822848
 
-N 1000 M 5000 P 0.5 Threshold 0.2
-Average steps for 1000 simulations: 74840 - stdev 12620.763989699026
 
-N 1000 M 5000 P 0.5 Threshold 0.3
-Average steps for 1000 simulations: 41850 - stdev 7216.618292495425
 
-N 1000 M 5000 P 0.7 Threshold 0.1
-Average steps for 1000 simulations: 562190 - stdev 667229.1200169538
 
-N 1000 M 5000 P 0.7 Threshold 0.2
-Average steps for 1000 simulations: 78225 - stdev 16404.068655930103
 
-N 1000 M 5000 P 0.7 Threshold 0.3
-Average steps for 1000 simulations: 41965 - stdev 7339.457925667442
 
-N 1000 M 5000 P 0.9 Threshold 0.1
-Average steps for 1000 simulations: 781455 - stdev 646492.4287533733
 
-N 1000 M 5000 P 0.9 Threshold 0.2
-Average steps for 1000 simulations: 113840 - stdev 31378.958539745054
 
-N 1000 M 5000 P 0.9 Threshold 0.3
-Average steps for 1000 simulations: 46720 - stdev 7331.121697622087
 
-N 1000 M 7500 P 0.3 Threshold 0.1
-Average steps for 1000 simulations: 250575 - stdev 321522.62155433354
+===== N 1000 M 750 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 5787.75 - stdev 1578.806532659264 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 7500 P 0.3 Threshold 0.2
-Average steps for 1000 simulations: 67845 - stdev 11614.791361810094
 
-N 1000 M 7500 P 0.3 Threshold 0.3
-Average steps for 1000 simulations: 38017.5 - stdev 6306.005824565932
+===== N 1000 M 750 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 5697 - stdev 1536.12358737039 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 7500 P 0.5 Threshold 0.1
-Average steps for 1000 simulations: 276990 - stdev 386046.12290373934
 
-N 1000 M 7500 P 0.5 Threshold 0.2
-Average steps for 1000 simulations: 69075 - stdev 12024.515123861085
+===== N 1000 M 750 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 5768.25 - stdev 1637.730624705754 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 7500 P 0.5 Threshold 0.3
-Average steps for 1000 simulations: 38130 - stdev 4316.738842486795
 
-N 1000 M 7500 P 0.7 Threshold 0.1
-Average steps for 1000 simulations: 276900 - stdev 308454.95531675196
+===== N 1000 M 750 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 5656.5 - stdev 1592.535374463914 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 7500 P 0.7 Threshold 0.2
-Average steps for 1000 simulations: 71355 - stdev 12996.456551032781
 
-N 1000 M 7500 P 0.7 Threshold 0.3
-Average steps for 1000 simulations: 38512.5 - stdev 4196.570618368641
 
-N 1000 M 7500 P 0.9 Threshold 0.1
-Average steps for 1000 simulations: 529995 - stdev 519550.89558974694
 
-N 1000 M 7500 P 0.9 Threshold 0.2
-Average steps for 1000 simulations: 103395 - stdev 24019.281856477326
 
-N 1000 M 7500 P 0.9 Threshold 0.3
-Average steps for 1000 simulations: 44932.5 - stdev 5768.229036386837
 
-N 1000 M 10000 P 0.3 Threshold 0.1
-Average steps for 1000 simulations: 172020 - stdev 160919.90186056794
 
-N 1000 M 10000 P 0.3 Threshold 0.2
-Average steps for 1000 simulations: 62690 - stdev 11866.115822151101
 
-N 1000 M 10000 P 0.3 Threshold 0.3
-Average steps for 1000 simulations: 40500 - stdev 3945.321985030571
 
-N 1000 M 10000 P 0.5 Threshold 0.1
-Average steps for 1000 simulations: 189690 - stdev 271411.25247116777
 
-N 1000 M 10000 P 0.5 Threshold 0.2
-Average steps for 1000 simulations: 63510 - stdev 12005.166555447035
 
-N 1000 M 10000 P 0.5 Threshold 0.3
-Average steps for 1000 simulations: 40340 - stdev 3239.582518611757
+===== N 1000 M 750 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 29622.75 - stdev 17632.63748967642 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 10000 P 0.7 Threshold 0.1
-Average steps for 1000 simulations: 192980 - stdev 167055.76083220606
 
-N 1000 M 10000 P 0.7 Threshold 0.2
-Average steps for 1000 simulations: 65490 - stdev 13503.415947168414
+===== N 1000 M 750 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 29071.5 - stdev 15218.99735957105 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 10000 P 0.7 Threshold 0.3
-Average steps for 1000 simulations: 40700 - stdev 3052.756020274028
 
-N 1000 M 10000 P 0.9 Threshold 0.1
-Average steps for 1000 simulations: 385060 - stdev 350387.45378190663
+===== N 1000 M 750 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 26977.5 - stdev 13508.445389712571 || numbers_clusters 1 - stdev_clusters 0.0
 
-N 1000 M 10000 P 0.9 Threshold 0.2
-Average steps for 1000 simulations: 99550 - stdev 20734.691399377698
 
-N 1000 M 10000 P 0.9 Threshold 0.3
-Average steps for 1000 simulations: 47210 - stdev 6399.75443723092
+===== N 1000 M 750 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 25038.75 - stdev 10763.656080985202 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+===== N 1000 M 750 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 134151 - stdev 45895.841339409526 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 750 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 136968.75 - stdev 46566.74696454929 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 750 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 134919.75 - stdev 47690.4760297215 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 750 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 116811 - stdev 48463.15178649735 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 1000 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 10010 - stdev 2890.3726843184522 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+===== N 1000 M 1000 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 9904 - stdev 3005.297957909634 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1000 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 9893 - stdev 2876.773683630123 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1000 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 9678 - stdev 2804.671492738888 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 1000 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 144174 - stdev 112071.28846273563 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1000 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 141858 - stdev 111333.34158709577 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1000 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 126570 - stdev 102378.34940272493 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1000 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 79367 - stdev 53063.83025264084 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 1000 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 114174 - stdev 24759.61960052623 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1000 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 115129 - stdev 25421.49900402436 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1000 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 118908 - stdev 26025.196384404997 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1000 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 144460 - stdev 39479.12107685531 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 1250 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 16415 - stdev 5345.977878693428 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1250 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 16328.75 - stdev 5290.7563769786775 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1250 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 15955 - stdev 5100.391062358747 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1250 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 15471.25 - stdev 4798.699141533146 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 1250 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 364582.5 - stdev 226431.54332504683 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1250 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 354378.75 - stdev 220141.1825424509 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1250 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 371492.5 - stdev 231588.5685517181 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1250 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 317520 - stdev 209714.26614187082 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 1250 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 88835 - stdev 16486.32612042322 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1250 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 89611.25 - stdev 17487.763802737052 || numbers_clusters 1.001 - stdev_clusters 0.03162277660168379
+
+
+===== N 1000 M 1250 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 91278.75 - stdev 17940.808469688483 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1250 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 106460 - stdev 22203.155859699993 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 1500 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 26995.5 - stdev 10088.459087331265 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1500 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 26094 - stdev 10442.591235498578 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1500 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 25959 - stdev 9439.036731277954 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1500 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 24193.5 - stdev 8582.713482385436 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 1500 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 331702.5 - stdev 251815.65353868913 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1500 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 341551.5 - stdev 275701.8463954419 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 1500 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 333748.5 - stdev 234954.94104630375 || numbers_clusters 1.001 - stdev_clusters 0.03162277660168379
+
+
+===== N 1000 M 1500 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 417276 - stdev 269142.5831303067 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 1500 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 75657 - stdev 13785.368598169125 || numbers_clusters 1.019 - stdev_clusters 0.13659303663678343
+
+
+===== N 1000 M 1500 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 76012.5 - stdev 14451.018153599964 || numbers_clusters 1.02 - stdev_clusters 0.14007005254378832
+
+
+===== N 1000 M 1500 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 76773 - stdev 13896.891544320068 || numbers_clusters 1.018 - stdev_clusters 0.1330176442946337
+
+
+===== N 1000 M 1500 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 86619 - stdev 16157.410092613882 || numbers_clusters 1.022 - stdev_clusters 0.1467567291047928
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 2000 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 82758 - stdev 82789.05400754053 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 2000 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 84946 - stdev 91577.37438635975 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 2000 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 74610 - stdev 104007.89172722203 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 2000 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 57962 - stdev 27084.462780792313 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+
+===== N 1000 M 2000 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 381400 - stdev 487113.2099207322 || numbers_clusters 1.197 - stdev_clusters 0.4247015085579181
+
+
+===== N 1000 M 2000 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 379242 - stdev 453812.01259858557 || numbers_clusters 1.195 - stdev_clusters 0.4208944667635251
+
+
+===== N 1000 M 2000 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 353680 - stdev 434422.5460868123 || numbers_clusters 1.211 - stdev_clusters 0.4457327424339362
+
+
+===== N 1000 M 2000 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 360778 - stdev 335178.4827988386 || numbers_clusters 1.161 - stdev_clusters 0.3914488884033677
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 2000 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 62410 - stdev 11196.484325950769 || numbers_clusters 1.985 - stdev_clusters 0.7716024691318518
+
+
+===== N 1000 M 2000 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 61952 - stdev 10724.957842374986 || numbers_clusters 1.99 - stdev_clusters 0.7839097617165605
+
+
+===== N 1000 M 2000 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 62874 - stdev 10593.977362461956 || numbers_clusters 2.006 - stdev_clusters 0.789041562014693
+
+
+===== N 1000 M 2000 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 68592 - stdev 11960.62676420398 || numbers_clusters 1.996 - stdev_clusters 0.776264508132754
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 2500 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 527927.5 - stdev 559325.011028214 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 2500 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 528340 - stdev 523029.10181111464 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 2500 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 445032.5 - stdev 500287.74772552075 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 2500 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 175655 - stdev 206245.5046375149 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 2500 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 500240 - stdev 696480.9693312809 || numbers_clusters 1.723 - stdev_clusters 0.7803075546730788
+
+
+===== N 1000 M 2500 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 500195 - stdev 707043.3223889006 || numbers_clusters 1.74 - stdev_clusters 0.768759384327106
+
+
+===== N 1000 M 2500 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 435752.5 - stdev 626776.7957139091 || numbers_clusters 1.828 - stdev_clusters 0.8093646094752791
+
+
+===== N 1000 M 2500 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 381167.5 - stdev 479636.5623320179 || numbers_clusters 1.919 - stdev_clusters 0.7981704555269358
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 2500 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 54367.5 - stdev 9040.21123476488 || numbers_clusters 3.247 - stdev_clusters 0.6815096884531103
+
+
+===== N 1000 M 2500 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 53982.5 - stdev 8139.391466408496 || numbers_clusters 3.215 - stdev_clusters 0.6864737768088788
+
+
+===== N 1000 M 2500 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 54787.5 - stdev 8762.869486168993 || numbers_clusters 3.281 - stdev_clusters 0.6946376908299186
+
+
+===== N 1000 M 2500 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 60080 - stdev 10147.490900295086 || numbers_clusters 3.228 - stdev_clusters 0.6359405793157253
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 3000 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 883986 - stdev 833359.2703495158 || numbers_clusters 1.002 - stdev_clusters 0.04469897088298564
+
+
+===== N 1000 M 3000 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 864294 - stdev 794885.6022627939 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 3000 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 820518 - stdev 737359.2396683751 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+===== N 1000 M 3000 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 524307 - stdev 529066.7598587038 || numbers_clusters 1 - stdev_clusters 0.0
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 3000 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 324885 - stdev 625966.6540855247 || numbers_clusters 1.937 - stdev_clusters 0.8035400902734577
+
+
+===== N 1000 M 3000 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 283998 - stdev 566295.6001089031 || numbers_clusters 1.981 - stdev_clusters 0.7843814469084887
+
+
+===== N 1000 M 3000 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 257550 - stdev 498620.27202639455 || numbers_clusters 1.986 - stdev_clusters 0.7812902241897145
+
+
+===== N 1000 M 3000 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 311889 - stdev 470898.6007318042 || numbers_clusters 2.121 - stdev_clusters 0.8142616422391651
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 3000 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 50592 - stdev 7873.724120867554 || numbers_clusters 3.366 - stdev_clusters 0.5834247032688832
+
+
+===== N 1000 M 3000 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 50523 - stdev 7097.594440854369 || numbers_clusters 3.36 - stdev_clusters 0.5768298993054475
+
+
+===== N 1000 M 3000 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 51027 - stdev 7751.151614524861 || numbers_clusters 3.351 - stdev_clusters 0.5514554407230952
+
+
+===== N 1000 M 3000 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 55344 - stdev 8646.874142280112 || numbers_clusters 3.292 - stdev_clusters 0.528218718917661
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 3500 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 764617 - stdev 735626.4977250039 || numbers_clusters 1.002 - stdev_clusters 0.04469897088298564
+
+
+===== N 1000 M 3500 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 816686.5 - stdev 744232.7195229719 || numbers_clusters 1.008 - stdev_clusters 0.08912880535463237
+
+
+===== N 1000 M 3500 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 843671.5 - stdev 823118.9748052431 || numbers_clusters 1.005 - stdev_clusters 0.07056897321046962
+
+
+===== N 1000 M 3500 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 906286.5 - stdev 804078.99064143 || numbers_clusters 1.001 - stdev_clusters 0.03162277660168379
+
+
+
+
+
+
+
+
+
+===== N 1000 M 3500 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 144669 - stdev 333033.2011257317 || numbers_clusters 2.51 - stdev_clusters 0.8127487684152838
+
+
+===== N 1000 M 3500 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 140017.5 - stdev 311519.24849988957 || numbers_clusters 2.541 - stdev_clusters 0.7738978730542667
+
+
+===== N 1000 M 3500 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 152516 - stdev 350579.03945744806 || numbers_clusters 2.514 - stdev_clusters 0.8077477678436855
+
+
+===== N 1000 M 3500 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 186179 - stdev 311332.8767077437 || numbers_clusters 2.442 - stdev_clusters 0.7397183134025973
+
+
+
+
+
+
+
+===== N 1000 M 3500 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 48492.5 - stdev 6479.635748206023 || numbers_clusters 3.219 - stdev_clusters 0.4552430628205621
+
+
+===== N 1000 M 3500 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 48356 - stdev 6256.429245736494 || numbers_clusters 3.236 - stdev_clusters 0.4738444138412191
+
+
+===== N 1000 M 3500 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 48597.5 - stdev 6541.6004376823785 || numbers_clusters 3.22 - stdev_clusters 0.45144634653943516
+
+
+===== N 1000 M 3500 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 52643.5 - stdev 7680.993126243859 || numbers_clusters 3.163 - stdev_clusters 0.3931737346079791
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 4000 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 711884 - stdev 781481.810642042 || numbers_clusters 1.025 - stdev_clusters 0.16248508055018898
+
+
+===== N 1000 M 4000 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 702040 - stdev 744086.3167985599 || numbers_clusters 1.023 - stdev_clusters 0.14997831007680243
+
+
+===== N 1000 M 4000 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 727984 - stdev 770666.6249363539 || numbers_clusters 1.029 - stdev_clusters 0.1678904023081343
+
+
+
+===== N 1000 M 4000 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 977008 - stdev 841613.4987137606 || numbers_clusters 1.012 - stdev_clusters 0.10893974420691407
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 4000 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 96864 - stdev 192621.17334400292 || numbers_clusters 3.163 - stdev_clusters 0.8118436364781645
+
+
+===== N 1000 M 4000 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 104608 - stdev 194256.87650652183 || numbers_clusters 3.192 - stdev_clusters 0.8389516314066263
+
+
+===== N 1000 M 4000 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 94136 - stdev 96129.44592774045 || numbers_clusters 3.182 - stdev_clusters 0.810884414410299
+
+
+===== N 1000 M 4000 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 139412 - stdev 125961.96518264024 || numbers_clusters 2.98 - stdev_clusters 0.8038944248135114
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 4000 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 46612 - stdev 7108.022227031932 || numbers_clusters 3.162 - stdev_clusters 0.3948568245730494
+
+
+===== N 1000 M 4000 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 46568 - stdev 7036.966313326709 || numbers_clusters 3.159 - stdev_clusters 0.3948099224625375
+
+
+
+===== N 1000 M 4000 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 46588 - stdev 6895.056040221703 || numbers_clusters 3.136 - stdev_clusters 0.3842546703055822
+
+
+
+===== N 1000 M 4000 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 50460 - stdev 7879.751930771075 || numbers_clusters 3.135 - stdev_clusters 0.37271156933198885
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 4500 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 635904 - stdev 793283.8265800668 || numbers_clusters 1.114 - stdev_clusters 0.3392920852585853
+
+
+===== N 1000 M 4500 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 610902 - stdev 693130.9175508368 || numbers_clusters 1.122 - stdev_clusters 0.37047706170997047
+
+
+===== N 1000 M 4500 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 639112.5 - stdev 677684.6368782539 || numbers_clusters 1.103 - stdev_clusters 0.31700392977294695
+
+
+===== N 1000 M 4500 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 867919.5 - stdev 793464.0230821279 || numbers_clusters 1.058 - stdev_clusters 0.25039708204909
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 4500 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 81594 - stdev 91282.14827990517 || numbers_clusters 3.73 - stdev_clusters 0.825700782233965
+
+
+===== N 1000 M 4500 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 78646.5 - stdev 16843.15824688855 || numbers_clusters 3.66 - stdev_clusters 0.819189276706593
+
+
+===== N 1000 M 4500 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 81940.5 - stdev 19421.003710805864 || numbers_clusters 3.651 - stdev_clusters 0.8269721173551638
+
+
+===== N 1000 M 4500 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 120438 - stdev 35019.387680448 || numbers_clusters 3.385 - stdev_clusters 0.8132874254754198
+
+
+
+
+
+
+
+
+
+===== N 1000 M 4500 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 44500.5 - stdev 7746.855072448014 || numbers_clusters 3.151 - stdev_clusters 0.41997068394755294
+
+
+===== N 1000 M 4500 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 44194.5 - stdev 7817.546532242951 || numbers_clusters 3.148 - stdev_clusters 0.4292787908577365
+
+
+===== N 1000 M 4500 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 44455.5 - stdev 7431.2511223375595 || numbers_clusters 3.156 - stdev_clusters 0.4357222209778311
+
+
+===== N 1000 M 4500 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 48388.5 - stdev 8021.075701263852 || numbers_clusters 3.156 - stdev_clusters 0.4169386499688387
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 5000 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 540375 - stdev 665237.6458834094 || numbers_clusters 1.268 - stdev_clusters 0.5295813973851956
+
+
+===== N 1000 M 5000 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 536510 - stdev 676654.0701352728 || numbers_clusters 1.28 - stdev_clusters 0.5252388750615056
+
+
+===== N 1000 M 5000 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 557500 - stdev 644943.2159126506 || numbers_clusters 1.274 - stdev_clusters 0.49917248839772127
+
+
+===== N 1000 M 5000 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 795505 - stdev 717019.7258529658 || numbers_clusters 1.195 - stdev_clusters 0.4440407325597193
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 5000 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 75185 - stdev 13550.80807182359 || numbers_clusters 3.999 - stdev_clusters 0.7743375224013096
+
+
+===== N 1000 M 5000 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 76110 - stdev 43703.293673107495 || numbers_clusters 3.981 - stdev_clusters 0.7932643117323936
+
+
+===== N 1000 M 5000 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 80320 - stdev 62272.590081636044 || numbers_clusters 3.981 - stdev_clusters 0.7779744496088828
+
+
+===== N 1000 M 5000 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 114715 - stdev 31347.670590515198 || numbers_clusters 3.74 - stdev_clusters 0.8068773457292323
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 5000 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 41860 - stdev 7615.667954841413 || numbers_clusters 3.114 - stdev_clusters 0.4372587279805804
+
+
+===== N 1000 M 5000 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 42335 - stdev 8540.826700075393 || numbers_clusters 3.128 - stdev_clusters 0.44023835567770536
+
+
+===== N 1000 M 5000 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 41990 - stdev 7165.280262574608 || numbers_clusters 3.158 - stdev_clusters 0.4639517768596767
+
+
+===== N 1000 M 5000 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 46800 - stdev 7679.12553413271 || numbers_clusters 3.151 - stdev_clusters 0.45210994614518646
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 7500 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 263452.5 - stdev 344659.4538568221 || numbers_clusters 3.406 - stdev_clusters 1.0992599202974573
+
+
+
+===== N 1000 M 7500 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 267390 - stdev 372720.01302332577 || numbers_clusters 3.295 - stdev_clusters 1.1538224760795337
+
+
+===== N 1000 M 7500 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 279885 - stdev 348227.72624293476 || numbers_clusters 3.319 - stdev_clusters 1.1578340034649093
+
+
+===== N 1000 M 7500 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 526110 - stdev 565780.3795094328 || numbers_clusters 3.007 - stdev_clusters 1.1163320282054068
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 7500 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 67875 - stdev 11189.149747504145 || numbers_clusters 3.894 - stdev_clusters 0.7178295614414882
+
+
+===== N 1000 M 7500 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 68910 - stdev 12535.211666802103 || numbers_clusters 3.855 - stdev_clusters 0.7186734247845064
+
+
+===== N 1000 M 7500 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 71220 - stdev 12370.919110544683 || numbers_clusters 3.863 - stdev_clusters 0.7160612709424689
+
+
+===== N 1000 M 7500 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 103867.5 - stdev 26766.63307919762 || numbers_clusters 3.98 - stdev_clusters 0.7211935386011997
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 7500 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 38190 - stdev 4536.736931097282 || numbers_clusters 2.825 - stdev_clusters 0.6594010993392487
+
+
+===== N 1000 M 7500 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 37927.5 - stdev 4756.165983737833 || numbers_clusters 2.821 - stdev_clusters 0.6159044879998345
+
+
+===== N 1000 M 7500 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 38295 - stdev 4249.827765455447 || numbers_clusters 2.879 - stdev_clusters 0.6250997918330718
+
+
+
+===== N 1000 M 7500 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 44715 - stdev 5756.684324714567 || numbers_clusters 3.002 - stdev_clusters 0.5816651393493806
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 10000 K 10 P 0.3 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 171410 - stdev 222729.25317573402 || numbers_clusters 4.945 - stdev_clusters 1.0368462036628432
+
+
+===== N 1000 M 10000 K 10 P 0.5 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 177970 - stdev 216439.42599518492 || numbers_clusters 4.918 - stdev_clusters 1.0021378549282929
+
+
+===== N 1000 M 10000 K 10 P 0.7 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 185830 - stdev 111479.76874230965 || numbers_clusters 4.851 - stdev_clusters 1.031437280140127
+
+
+===== N 1000 M 10000 K 10 P 0.9 THRESHOLD 0.1 =====
+Average steps for 1000 simulations: 370810 - stdev 286232.72537058557 || numbers_clusters 4.497 - stdev_clusters 1.0329850231528326
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 10000 K 10 P 0.3 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 63000 - stdev 12163.385546300337 || numbers_clusters 3.468 - stdev_clusters 0.7807596208728943
+
+
+===== N 1000 M 10000 K 10 P 0.5 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 64100 - stdev 13013.814174151994 || numbers_clusters 3.406 - stdev_clusters 0.7744441643938985
+
+
+===== N 1000 M 10000 K 10 P 0.7 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 66010 - stdev 13113.041289184284 || numbers_clusters 3.377 - stdev_clusters 0.7896166756689568
+
+
+===== N 1000 M 10000 K 10 P 0.9 THRESHOLD 0.2 =====
+Average steps for 1000 simulations: 99000 - stdev 20523.6746520018 || numbers_clusters 3.593 - stdev_clusters 0.7758562708085519
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== N 1000 M 10000 K 10 P 0.3 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 40130 - stdev 2700.0722935488952 || numbers_clusters 2.566 - stdev_clusters 0.7471293075513784
+
+
+===== N 1000 M 10000 K 10 P 0.5 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 40210 - stdev 3076.583391583164 || numbers_clusters 2.569 - stdev_clusters 0.7535295659805306
+
+
+===== N 1000 M 10000 K 10 P 0.7 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 40640 - stdev 2999.899898229839 || numbers_clusters 2.594 - stdev_clusters 0.7692566254220732
+
+
+===== N 1000 M 10000 K 10 P 0.9 THRESHOLD 0.3 =====
+Average steps for 1000 simulations: 47430 - stdev 6429.341835400917 || numbers_clusters 2.783 - stdev_clusters 0.7405804881709074
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

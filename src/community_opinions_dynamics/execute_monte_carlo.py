@@ -47,7 +47,7 @@ class ExecuteMonteCarloDW:
                                         save_history_opinions=self.save_results)
             steps = graph_dw.apply_dw(v_convergence=self.v_convergence, confidence_threshold=self.confidence_threshold,
                                       seed=seed)
-            count_clusters_monte_carlo.append(graph_dw.count_opinion_clusters_dbscan(eps=self.eps))
+            count_clusters_monte_carlo.append(graph_dw.count_opinion_clusters_dbscan())
             if self.save_results:
                 graph_dw.draw_opinions(path=f"{self.path_directory}/opinions_history_{i}_steps_{steps}.png")
             steps_monte_carlo.append(steps)

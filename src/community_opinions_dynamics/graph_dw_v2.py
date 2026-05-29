@@ -169,13 +169,23 @@ class GraphDWOptimized:
     def get_final_opinions(self):
         return self.opinions.copy()
 
-    def count_opinion_clusters_dbscan(self, eps=0.02, min_samples=1):
-        x = np.array(self.get_final_opinions()).reshape(-1, 1)
-        labels = DBSCAN(eps=eps, min_samples=min_samples).fit_predict(x)
-        return len(set(labels))
+    def count_opinion_clusters_dbscan(self, eps=0.01, min_samples_ratio=0.01):
+        final_opinions = np.array(self.get_final_opinions()).reshape(-1, 1)
 
-    def has_consensus(self, eps=0.02):
-        return self.count_opinion_clusters_dbscan(eps=eps) == 1
+        min_samples = max(3, int(len(final_opinions) * min_samples_ratio))
+
+        labels = DBSCAN(
+            eps=eps,
+            min_samples=min_samples,
+        ).fit_predict(final_opinions)
+
+        cluster_labels = set(labels)
+        cluster_labels.discard(-1)
+
+        return len(cluster_labels)
+
+    def has_consensus(self):
+        return self.count_opinion_clusters_dbscan() == 1
 
     def get_sweeps(self, steps):
         return steps / len(self.edges_u)
@@ -273,6 +283,7 @@ class GraphDWOptimized:
 
         ax.set_title(title)
         ax.set_xlabel("time step")
+        ax.set_xlim(0, len(history) - 1)
         ax.set_ylabel("opinion")
         ax.set_ylim(0, 1)
         ax.grid(alpha=0.6)
@@ -297,12 +308,11 @@ class GraphDWOptimized:
             ax_hist.spines[spine].set_visible(False)
 
         max_count = counts.max() if counts.max() > 0 else 1
-        freq_threshold = 0.8
 
         for c, y in zip(counts, bin_centers):
             if c > 0:
                 relative_freq = c / max_count
-                color = "red" if relative_freq >= freq_threshold else "green"
+                color = "red"
 
                 ax_hist.hlines(
                     y=y,
