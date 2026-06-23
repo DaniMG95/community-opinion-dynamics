@@ -113,6 +113,7 @@ class GraphDW:
         matplotlib.use('Agg')
 
         import matplotlib.pyplot as plt
+        from matplotlib.patches import Rectangle
         import numpy as np
 
         if not self.history_opinions:
@@ -247,6 +248,19 @@ class GraphDW:
         )
 
         plt.subplots_adjust(right=0.95)
+        fig.add_artist(
+            Rectangle(
+                (0.01, 0.01),
+                0.98,
+                0.98,
+                transform=fig.transFigure,
+                fill=False,
+                edgecolor="black",
+                linewidth=1.2,
+                clip_on=False,
+                zorder=10
+            )
+        )
 
         plt.savefig(path, bbox_inches="tight", dpi=150)
         plt.close()

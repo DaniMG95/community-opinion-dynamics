@@ -75,6 +75,7 @@ class GraphDWOptimized:
         self.d = d
         self.save_history_opinions = save_history_opinions
         self.history_opinions = []
+        self.last_steps = None
 
         self.node_to_idx = {
             node: idx
@@ -138,6 +139,7 @@ class GraphDWOptimized:
         )
 
         self.opinions = final_opinions
+        self.last_steps = steps
         self._sync_opinions_to_graph()
 
         if self.save_history_opinions:
@@ -159,6 +161,7 @@ class GraphDWOptimized:
         )
 
         self.opinions = final_opinions
+        self.last_steps = steps
         self._sync_opinions_to_graph()
 
         if self.save_history_opinions:
@@ -223,6 +226,8 @@ class GraphDWOptimized:
         matplotlib.use("Agg")
 
         import matplotlib.pyplot as plt
+        from matplotlib.patches import Rectangle
+        import numpy as np
 
         if not self.history_opinions:
             print("No opinions history to plot.")
@@ -231,18 +236,20 @@ class GraphDWOptimized:
         history = np.array(self.history_opinions)
         step = 4000
 
-        sampled_history = history[::step]
-        x = np.arange(0, len(history), step)
+        total_steps = self.last_steps if self.last_steps is not None else len(history) - 1
+        history_steps = np.linspace(0, total_steps, len(history))
 
-        if x[-1] != len(history) - 1:
+        sampled_history = history[::step]
+        x = history_steps[::step]
+
+        if x[-1] != total_steps:
             sampled_history = np.vstack([sampled_history, history[-1]])
-            x = np.append(x, len(history) - 1)
+            x = np.append(x, total_steps)
 
         n_agents = sampled_history.shape[1]
 
         fig, (ax, ax_hist) = plt.subplots(
-            1,
-            2,
+            1, 2,
             figsize=(8.5, 6),
             dpi=150,
             sharey=True,
@@ -255,9 +262,9 @@ class GraphDWOptimized:
         ax.scatter(
             np.zeros(n_agents),
             sampled_history[0],
-            color="green",
+            color='green',
             s=8,
-            label="initial opinions",
+            label='initial opinions',
             zorder=3
         )
 
@@ -265,7 +272,7 @@ class GraphDWOptimized:
             ax.plot(
                 x,
                 sampled_history[:, i],
-                color="blue",
+                color='blue',
                 alpha=0.03,
                 linewidth=0.5
             )
@@ -273,17 +280,17 @@ class GraphDWOptimized:
         ax.scatter(
             np.full(n_agents, x[-1]),
             sampled_history[-1],
-            color="red",
+            color='red',
             s=8,
-            label="final opinions",
+            label='final opinions',
             zorder=3
         )
 
-        ax.scatter([], [], color="blue", s=8, label="updated opinions")
+        ax.scatter([], [], color='blue', s=8, label='updated opinions')
 
         ax.set_title(title)
         ax.set_xlabel("time step")
-        ax.set_xlim(0, len(history) - 1)
+        ax.set_xlim(0, total_steps)
         ax.set_ylabel("opinion")
         ax.set_ylim(0, 1)
         ax.grid(alpha=0.6)
@@ -304,10 +311,14 @@ class GraphDWOptimized:
         ax_hist.grid(False)
         ax_hist.set_ylim(0, 1)
 
-        for spine in ["left", "top", "bottom", "right"]:
-            ax_hist.spines[spine].set_visible(False)
+        ax_hist.spines["left"].set_visible(False)
+        ax_hist.spines["top"].set_visible(False)
+        ax_hist.spines["bottom"].set_visible(False)
+        ax_hist.spines["right"].set_visible(False)
 
         max_count = counts.max() if counts.max() > 0 else 1
+
+        freq_threshold = 0.8
 
         for c, y in zip(counts, bin_centers):
             if c > 0:
@@ -330,7 +341,7 @@ class GraphDWOptimized:
         ax_hist.yaxis.tick_right()
         ax_hist.yaxis.set_label_position("right")
         ax_hist.tick_params(
-            axis="y",
+            axis='y',
             right=True,
             labelright=True,
             left=False,
@@ -338,14 +349,13 @@ class GraphDWOptimized:
             labelsize=8
         )
 
-        ax_hist_top = ax_hist.secondary_xaxis("top")
+        ax_hist_top = ax_hist.secondary_xaxis('top')
         ax_hist_top.set_xticks([0.01, 1.0])
-        ax_hist_top.set_xticklabels(["1%", "100%"])
-        ax_hist_top.tick_params(axis="x", labelsize=7, pad=2, length=0)
+        ax_hist_top.set_xticklabels(['1%', '100%'])
+        ax_hist_top.tick_params(axis='x', labelsize=7, pad=2, length=0)
 
         fig.text(
-            0.995,
-            0.5,
+            0.995, 0.5,
             "final distribution",
             rotation=90,
             ha="center",
@@ -355,5 +365,19 @@ class GraphDWOptimized:
         )
 
         plt.subplots_adjust(right=0.95)
+        fig.add_artist(
+            Rectangle(
+                (0.01, 0.01),
+                0.98,
+                0.98,
+                transform=fig.transFigure,
+                fill=False,
+                edgecolor="black",
+                linewidth=1.2,
+                clip_on=False,
+                zorder=10
+            )
+        )
+
         plt.savefig(path, bbox_inches="tight", dpi=150)
         plt.close()

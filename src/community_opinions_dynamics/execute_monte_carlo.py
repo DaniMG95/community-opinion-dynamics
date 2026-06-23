@@ -11,7 +11,7 @@ class ExecuteMonteCarloDW:
     PATH_RESULTS = "./results"
 
     def __init__(self, nodes: int, edges: int, communities: int, p_inter: float, d: float, v_convergence: float,
-                 confidence_threshold: float, num_executes: int, eps: float, seed: int, save_results: bool = True,
+                 confidence_threshold: float, num_executes: int, seed: int, save_results: bool = True,
                  partition_average: int = None):
         self.p_inter = p_inter
         self.graph_factory = GraphFactory(nodes, edges, communities, p_inter)
@@ -20,7 +20,6 @@ class ExecuteMonteCarloDW:
         self.confidence_threshold = confidence_threshold
         self.num_executes = num_executes
         self.save_results = save_results
-        self.eps = eps
         self.seed = seed
         self.path_directory = f"{self.PATH_RESULTS}/n_{nodes}_m_{edges}_k_{communities}_p_{self.p_inter}_threshold_{self.confidence_threshold}"
         if partition_average is None:
@@ -32,7 +31,6 @@ class ExecuteMonteCarloDW:
 
     def execute(self):
         steps_monte_carlo = []
-        count_clusters_monte_carlo = []
         if os.path.exists(self.path_directory):
             print(f"Directory {self.path_directory} already exists. Results will be overwritten.")
             shutil.rmtree(self.path_directory)
@@ -47,7 +45,6 @@ class ExecuteMonteCarloDW:
                                         save_history_opinions=self.save_results)
             steps = graph_dw.apply_dw(v_convergence=self.v_convergence, confidence_threshold=self.confidence_threshold,
                                       seed=seed)
-            count_clusters_monte_carlo.append(graph_dw.count_opinion_clusters_dbscan())
             if self.save_results:
                 graph_dw.draw_opinions(path=f"{self.path_directory}/opinions_history_{i}_steps_{steps}.png")
             steps_monte_carlo.append(steps)
@@ -62,12 +59,9 @@ class ExecuteMonteCarloDW:
         mean_steps = 0
         for i in range(0, len(steps_monte_carlo), self.partition_average):
             partition = steps_monte_carlo[:i + self.partition_average]
-            partition_clusters = count_clusters_monte_carlo[:i + self.partition_average]
             mean_partition = statistics.mean(partition)
-            mean_clusters_partition = statistics.mean(partition_clusters)
             with open(f"{self.path_directory}/results.txt", "a+") as file:
                 file.write(f"Average steps for {i + self.partition_average} simulations: {mean_partition} - "
-                           f"stdev {statistics.stdev(partition)} || numbers_clusters {mean_clusters_partition} - "
-                           f"stdev_clusters {statistics.stdev(partition_clusters)}\n")
+                           f"stdev {statistics.stdev(partition)}\n")
             mean_steps = mean_partition
         return mean_steps
